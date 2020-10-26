@@ -1,0 +1,102 @@
+.mt0 { margin-top:0px; }
+.mt2 { margin-top:2px; }
+.mt5 { margin-top:5px; }
+.ml5 { margin-left:5px; }
+.ml32 { margin-left:32px; }
+.mr2 { margin-right:2px; }
+.mr5 { margin-right:5px; }
+.mr7 { margin-right:7px; }
+.mt5  { margin-top: 5px; }
+.mt10 { margin-top:10px; }
+.mt20 { margin-top:20px; }
+.mb5  { margin-bottom:5px; }
+.mb10 { margin-bottom:10px; }
+.pb10 { padding-bottom:10px; }
+.m0000 { margin:0px 0px 0px 0px; }
+.m2222 { margin:2px 2px 2px 2px; }
+.m0050 { margin:0px 0px 5px 0px; }
+.m5050 { margin:5px 0px 5px 0px; }
+.m5555 { margin:5px 5px 5px 5px; }
+.m9090 { margin:9px 0px 9px 0px; }
+.m9050 { margin:9px 0px 5px 0px; }
+.p0000 { padding:0px 0px 0px 0px; }
+.p5050 { padding:5px 0px 5px 0px; }
+.p5555 { padding:5px 5px 5px 5px; }
+.p9090 { padding:9px 0px 9px 0px; }
+.pRL0 { padding-right:0px; padding-left:0px; }
+.ht100 { height: 100%; }
+.hddn { display: none; }
+.vddn { visibility: hidden; }
+#main:focus { outline: none; }
+.inline-block { display:inline-block; }
+.valign-middle { vertical-align: middle; }
+[data-hidden="hidden"] { visibility: hidden; }
+#form .form-control-feedback { pointer-events: auto; }
+#form .form-control-feedback:hover { cursor: pointer; }
+
+.radlist input[type="radio"] {
+  margin: 0px 5px 0px 5px;
+  vertical-align :middle;
+}
+
+.radlist tbody tr td { 
+  border-top: none !important;
+  padding: 3px 0px 3px 0px !important;
+}
+
+.radlist tbody tr td label { 
+  margin: 0px 0px 0px 0px;
+  vertical-align: middle;
+  font-weight: 400 !important;
+}
+
+.spanbox {
+  border: 1px solid #0094ff;
+  border-radius: 5px;
+  margin: -1px;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.errortext
+{
+	text-align:left;
+	vertical-align:middle;
+  font-weight:bold;
+	font-size: small;
+  color:Red;
+}
+
+.successtext
+{
+	text-align:left;
+	vertical-align:middle;
+  font-weight:bold;
+	font-size:small;
+  color:green;
+}
+
+
+.previewimg{
+    height:140px;
+        width:140px;
+    
+}
+
+.tableradlist {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px !important;
+}
+
+.fnt2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #003366;
+}
+
+#scrn {
+    margin: 20px 0px 0px 0px;
+}

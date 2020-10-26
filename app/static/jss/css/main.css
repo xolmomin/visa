@@ -1,0 +1,20 @@
+form .error {
+    color: red;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 3px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+form .form-control {
+    padding: 6px 12px;
+    color: #0f0f0f;
+}
+
+form label{
+    margin-top: 7px;
+}

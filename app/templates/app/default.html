@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Electronic Diversity Visa Program
+    </title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link href="{% static '/jss/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/css/bootstrap-theme.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/edv.css' %}" rel="stylesheet"/>
+    <script type="text/javascript" src="{% static '/jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/jss/js/bootstrap.min.js' %}"></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="/jss/html5shiv.min.js"></script>
+    <script src="/jss/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/jss/Universal-Federated-Analytics.js?agency=DOS&subagency=CA"
+            id="_fed_an_ua_tag"></script>
+</head>
+<body id="escbodytag" role="document">
+<form method="post" action="#" id="escform">
+    {% csrf_token %}
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+               value="/wEPDwUJMjUzNTk5OTE4D2QWAmYPZBYCAgMPZBYCAgEPZBYCZg8WAh4HVmlzaWJsZWhkZHcmd4JI4rZyfwfbDYvGjGh5dNU9"/>
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="487E1EA0"/>
+    </div>
+    <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="bg-primary">
+        <div class="container" id="header">
+            <div class="row hidden-xs">
+                <div class="col-sm-8">
+                    <div class="inline-block valign-middle">
+                        <a href="http://www.state.gov" target="_blank" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="inline-block valign-middle text-center">
+                        <h4 class="m2222">U.S. Department of State</h4>
+                        <h5 class="m2222">Bureau of Consular Affairs</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="inline-block valign-middle pull-right mt5">
+                        <h4 class="text-right m2222">Electronic Diversity Visa</h4>
+                        <h5 class="text-right m2222">Entrant Status Check: 5.5</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <div class="inline-block">
+                        <a href="http://www.state.gov" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="pull-right inline-block valign-middle text-right mt2">
+                        <h5 class="m2222">U.S. Department of State</h5>
+                        <h6 class="m2222">Bureau of Consular Affairs</h6>
+                        <h6 class="m2222">eDV ESC: 5.5</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="link">
+        <div class="row">
+            <div class="col-sm-12 text-right mt5">
+        <span class="">
+
+
+          <a href="./Help.aspx" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help
+          </a>
+
+
+          <a href="{% url 'index' %}" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+          </a>
+
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="main" role="main">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-header text-center mt0 mb10">
+                    <h3>Welcome</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 mt0">
+                <p>The U.S. Department of State Electronic Diversity Visa Entrant Status Check for DV-2021 applicants is
+                    available until September 30, 2021. The Entrant Status Check for DV-2020 applicants will remain open
+                    until September 30, 2020.</p>
+                <br/>
+                <h4 class="text-center mt0">Entrant Status Check Instructions</h4>
+                <p>Please be sure to have the Entrant's Confirmation Number, Last/Family Name, and Year of Birth to
+                    check the entrant status online.</p>
+                <p class="text-center">
+                    <br/>
+                    <a class="btn btn-primary" href="{% url 'check' %}">Continue</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container" id="footer">
+            <hr class="hideme">
+            <p class="small hideme">
+                <b>PAPERWORK REDUCTION ACT:</b>
+                Public reporting burden for this collection of information is estimated to average 30 minutes per
+                response, including time required for searching existing data sources, gathering the necessary
+                documentation, providing the information and/or documents required, and reviewing the final collection.
+                You do not have to supply this information unless this collection displays a currently valid OMB control
+                number. If you have comments on the accuracy of this burden estimate and/or recommendations for reducing
+                it, please send them to: PRA_BurdenComments@state.gov.
+            </p>
+            <p class="small hideme">
+                <b>CONFIDENTIALITY STATEMENT:</b>
+                INA Section 222(f) provides that visa issuance and refusal records shall be confidential and shall be
+                used only for the formulation, amendment, administration, or enforcement of the immigration,
+                nationality, and other laws of the United States. Certified copies of visa records may be made available
+                to a court which certifies that the information contained in such records is needed in a case pending
+                before the court.
+            </p>
+            <p class="small hideme">
+                <b>PRIVACY POLICY:</b> For information on the Department of State’s privacy policy, regarding the
+                nature, purpose, use, and sharing of any Personally Identifiable Information (PII) collected via this
+                website please <a href="https://www.state.gov/privacy-policy" target="_blank">click here</a>.<br>
+            </p>
+            <hr>
+            <div class="row hidden-xs">
+                <div class="col-sm-12 text-center mb5">
+                    <a href="http://www.usa.gov" class="" target="_blank">
+                        <img alt="USA Gov" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                    <a href="http://travel.state.gov" target="_blank" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="{% url 'index' %}" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="http://www.usa.gov">
+                        <img alt="USA Gov" class="mb10" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a href="http://travel.state.gov" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="{% url 'index' %}" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="">
+                        <small>
+                            This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External
+                            links to other Internet sites should not be construed as an endorsement of the views
+                            contained therein.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jss/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jss/js/common.js' %}"></script>
+
+    <script type="text/javascript" id="_fed_an_ua_tag"
+            src="jss/Universal-Federated-Analytics.js?agency=DOS&subagency=CA"></script>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,1041 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="ctl00_Head1">
+    <title>
+        Immigrant Visa - Summary Information
+    </title>
+    <script>window['adrum-start-time'] = new Date().getTime();</script>
+    <script type="text/javascript" src="https://ceac.state.gov/adrum.js"></script>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <link href="{% static 'jss/css/screen.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'jss/css/print.css' %}" rel="stylesheet" type="text/css" media="print"/>
+    <link id="ctl00_stylesheet" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .HiddenText label {
+            display: none;
+        }
+    </style>
+    <script type='text/javascript' src="{% static 'jss/js/jquery-1.9.1.min.js' %}"></script>
+</head>
+<body onload='setTimeout("SessionAlert()", 15 * 60 * 1000);history.go(+1);'>
+<form method="post" action="#" onsubmit="javascript:return WebForm_OnSubmit();"
+      onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_SiteContentPlaceHolder_btnContinue')"
+      id="aspnetForm" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+    <div id="container">
+        <div id="branding">
+            <div id="branding-logo">
+                <img src="{% static 'jss/banner.png' %}" id="ctl00_Img1"
+                     alt="U.S. Department of State Electronic Application Center">
+            </div>
+        </div>
+        <hr/>
+        <div id="nav">
+            <div id="nav-global">
+                <ul>
+                    <li id="ctl00_divHome">
+                        <a id="ctl00_lbtnHome"
+                           href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lbtnHome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Home</a>
+                    </li>
+                    <li id="ctl00_divContactUs">
+                        <a id="ctl00_hlContact"
+                           href="https://travel.state.gov/content/travel/en/contact-us/us-visas.html" target="_ceac">Contact
+                            Us</a>
+                    </li>
+
+                    <li id="ctl00_divSignOut">
+                        <a onclick="return confirm('You are about to sign out of the application.');"
+                           id="ctl00_lbtnSignOut"
+                           href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lbtnSignOut&quot;, &quot;&quot;, true, &quot;&quot;, &quot;SignOut.aspx&quot;, false, true))">Sign
+                            Out</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="nav-main" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:CSD-Namespace">
+                <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <li class="" style="width:253px; display:inline-block;"><span class="tooltip_text"
+                                                                                          onmouseout="hideToolTip()"
+                                                                                          onmouseover="widetip=false; tip=''; delayToolTip(event,tip,widetip,0,0);return false"><a
+                                    class="main" style="width:253px; display:inline-block;" disabled="true" id="IVAGENT"
+                                    title="">CHOICE OF ADDRESS &amp; AGENT</a></span></li>
+                        </td>
+                        <td>
+                            <li class="" style="width:253px; display:inline-block;"><span class="tooltip_text"
+                                                                                          onmouseout="hideToolTip()"
+                                                                                          onmouseover="widetip=false; tip=''; delayToolTip(event,tip,widetip,0,0);return false"><a
+                                    class="main" style="width:253px; display:inline-block;"
+                                    href="https://ceac.state.gov/CTRAC/Invoice/CTRACEntryFromCEAC.aspx?0y4ZtXSbTK4DeVyccj01ZVWg2NCRF6N7rTZz75zrvP7FDjyQmlduoPwzZLyFRhvOlYpkjZ%2fKOmpvaYpnyLsN4LKOzj%2bS1sGDm8peRp6Y6UDxQPHoz4jvWb91cZbDXzqxsez%2bYEwxf4Ns8eUcXgbb%2bqNLMNmSdGut78LCGaD2B3Dkqb4hfa6SNj9B%2fQVMCUDiaszznf%2bRcN95nHXD4%2b8D8QRhA0ilF9elCZPQywEuzo6fSksDbeiXYvTD77MX32oknEDfZcrNFCZZbEo1%2fYckHVxU5st8RKp0xnCbCqGtD4I%3d"
+                                    id="FEE">FEES</a></span></li>
+                        </td>
+                        <td>
+                            <li class="" style="width:253px; display:inline-block;"><span class="tooltip_text"
+                                                                                          onmouseout="hideToolTip()"
+                                                                                          onmouseover="widetip=false; tip=''; delayToolTip(event,tip,widetip,0,0);return false"><a
+                                    class="main" style="width:253px; display:inline-block;" disabled="true" id="IVAPP"
+                                    title="">IV APPLICATION</a></span></li>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr/>
+        <div id="content_no_nav">
+            <div id="content-main">
+                <h1>
+                    <span id="ctl00_lblPageTitle" style="display:inline-block;width:500px;">Immigrant Visa</span>
+                </h1>
+                <div class="burden">
+                    <div id="ctl00_pnlFSC">
+
+                    </div>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>
+                                CASE NUMBER:
+                            </td>
+                            <td class="case">
+                                <span id="ctl00_lblCaseNo">{{ winner.case_number }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                VISA CLASS:
+                            </td>
+                            <td>
+                                <span id="ctl00_lblVisa">DV</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="case" style="font-weight:bold;">
+                                YOUR CASE IS CURRENTLY AT:
+                            </td>
+                            <td>
+                                <span id="ctl00_lblProcessSite">KCC</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                FOREIGN STATE OF CHARGEABILITY:
+                            </td>
+                            <td>
+                                <span id="ctl00_lblChargeability">UZBEKISTAN</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <script type="text/javascript">
+                </script>
+                <h2>Summary Information</h2>
+                <div style="clear:both;"></div>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div style="float:right; text-align:right; margin-left:10px;">
+
+                                <br><br>
+
+                            </div>
+                            <div>
+
+                                <p>Before we can process your Diversity Visa application, each applicant in your case
+                                    must complete Form DS-260, the Online Immigrant Visa and Alien Registration
+                                    Application. To access the online form, click on the link to the right of an
+                                    applicant's name below, under the "IV Application" heading.</p>
+
+                                <p>If a person in your family is not listed below, click the “Add Applicant” button to
+                                    add him or her. Derivative applicants for the DV program include spouses or children
+                                    under the age of 21 who meet the requirements of U.S. immigration law. Filling out
+                                    an application does not guarantee that an individual will qualify as a derivative in
+                                    your case. This can only be decided by a consular officer at your visa
+                                    interview.</p>
+
+                                <p>If you have any questions, please contact the Kentucky Consular Center (KCC) by email
+                                    (<a href="mailto:kccdv@state.gov" target="_ceac">kccdv@state.gov</a>) or by phone
+                                    (Public Inquiry Phone Number 606-526-7500 7:30 a.m. to 4:00 p.m. EDT Monday –
+                                    Friday).</p>
+
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div id="ctl00_SiteContentPlaceHolder_ucIVProcessChart_pnlChart">
+
+                        &nbsp;
+
+                    </div>
+                </div>
+                <div id="ctl00_SiteContentPlaceHolder_updAgent">
+                </div>
+                <div id="ctl00_SiteContentPlaceHolder_pnlAos">
+
+                    <div id="petitioner-listing">
+
+                    </div>
+                </div>
+                <br>
+                <div id="ctl00_SiteContentPlaceHolder_pnlApplicants">
+
+                    <div id="applicant-listing">
+                        <div id="ctl00_SiteContentPlaceHolder_ucApplicants_updApplicant">
+
+                            <div style="clear:both;"></div>
+
+                            <table class="category">
+                                <thead>
+                                <tr>
+                                    <th class="action" colspan="6">
+                                        <div style="float:right;width:16px;">
+
+                                        </div>
+                                        APPLICANT INFORMATION
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="head first" style="width:200px;">
+                                        <!-- Applicants' section menu items -->
+                                        <div id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl00_ucAppMenu_updAppMenu">
+
+                                            <div style="float:left;">
+                                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl00_ucAppMenu_pnlAdd"
+                                                     class="menu add-applicant">
+
+                                                    <a id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl00_ucAppMenu_lnkAdd"
+                                                       title="Click to add an applicant" class="action"
+                                                       href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucApplicants$gridApplicants$ctl00$ucAppMenu$lnkAdd&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                                                       style="text-decoration:none;">Add Applicant</a>
+
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </th>
+                                    <th class="head" style="width:30px;text-align:left;padding-left:2px;">Status</th>
+                                    <th class="head" style="width:60px;padding-left:40px;">IV Fee</th>
+                                    <th id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl00_thApp"
+                                        style="width:60px;" class="head last">IV<br>Application
+                                    </th>
+
+
+                                </tr>
+                                </thead>
+                            </table>
+                            <div style="max-height:225px; overflow-y:auto; overflow-x:hidden; margin-top:-19px;">
+                                <table class="category">
+
+                                    <tbody>
+                                    <tr>
+                                        <td class="item-list" style="width:220px;">
+
+                                            <div class="item-status"></div>
+                                            <span id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_lblName">{{ winner.lastname }}, {{ winner.name }}</span>
+                                            <div class="hint">
+                                                PRINCIPAL
+                                            </div>
+                                        </td>
+                                        <td class="status">
+
+                                            <div style="white-space:nowrap;">
+                                                <span id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_lblStatus"
+                                                      title="The travel status of the principal applicant cannot be changed.">PRINCIPAL APPLICANT</span>
+                                            </div>
+                                        </td>
+                                        <td class="status">
+                                            <a id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_hlPay"
+                                               title="You do not need to pay an IV fee for this applicant at this time."
+                                               class="aspNetDisabled disable">N/A</a>
+                                        </td>
+                                        <td id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_tdDS260"
+                                            class="status last">
+                                            <a id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_hlDS260"
+                                               title="The IV Application (form DS-260) has been submitted for this applicant. It will be reviewed when you have submitted all supporting documentation."
+                                               onclick="javascript:disableLink('ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl01_hlDS260', 'COMPLETED');SetValidNav();"
+                                               href="https://ceac.state.gov/IVApp/Default.aspx?0y4ZtXSbTK4DeVyccj01ZVWg2NCRF6N7rTZz75zrvP7FDjyQmlduoPwzZLyFRhvOlYpkjZ%2fKOmpvaYpnyLsN4LKOzj%2bS1sGDm8peRp6Y6UDxQPHoz4jvWb91cZbDXzqxsez%2bYEwxf4Ns8eUcXgbb%2bqNLMNmSdGut78LCGaD2B3Dkqb4hfa6SNj9B%2fQVMCUDiaszznf%2bRcN95nHXD4%2b8D8QRhA0ilF9elCZPQywEuzo6fSksDbeiXYvTD77MX32okXcDUiZrNWd6wr7RLMZk8OlVBo9fS2iF9yE5C44ud29Prd6bkKbPaCV74IbsHQ59J37yx%2bKCG%2f2gQ2ve3a8pGvqX5U3pEmTG3hP7CH0rImdQ%3d">COMPLETED</a>
+                                        </td>
+                                    </tr>
+                                    {% for i in winner.member.all %}
+                                        <tr>
+                                            <td class="item-list" style="width:220px;">
+                                                <div class="item-status"></div>
+                                                <span id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_lblName">{{ i.lastname }}, {{ i.name }} </span>
+                                                <div class="hint">
+                                                    {{ i.relationship }}
+                                                </div>
+                                            </td>
+                                            <td class="status">
+
+                                                <div style="white-space:nowrap;">
+                                                    <span id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_lblStatus">ACCOMPANY</span>
+                                                </div>
+                                            </td>
+                                            <td class="status">
+                                                <a id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_hlPay"
+                                                   title="You do not need to pay an IV fee for this applicant at this time."
+                                                   class="aspNetDisabled disable">N/A</a>
+                                            </td>
+                                            <td id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_tdDS260"
+                                                class="status last">
+                                                <a id="ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_hlDS260"
+                                                   title="The IV Application (form DS-260) has been submitted for this applicant. It will be reviewed when you have submitted all supporting documentation."
+                                                   onclick="javascript:disableLink('ctl00_SiteContentPlaceHolder_ucApplicants_gridApplicants_ctl02_hlDS260', 'COMPLETED');SetValidNav();"
+                                                   href="https://ceac.state.gov/IVApp/Default.aspx?0y4ZtXSbTK4DeVyccj01ZVWg2NCRF6N7rTZz75zrvP7FDjyQmlduoPwzZLyFRhvOlYpkjZ%2fKOmpvaYpnyLsN4LKOzj%2bS1sGDm8peRp6Y6UDxQPHoz4jvWb91cZbDXzqxsez%2bYEwxf4Ns8eUcXgbb%2bqNLMNmSdGut78LCGaD2B3Dkqb4hfa6SNj9B%2fQVMCUDiaszznf%2bRcN95nHXD4%2b8D8QRhA0ilF9elCZPQywEuzo6fSksDbeiXYvTD77MX32okXcDUiZrNWd6wr7RLMZk8OjBHG2mz1wSElOEr1Xbf1f5W8inFlESOFSvJg5Qpkt2gEpr3H0CMu%2fYrq1dor19ANmO5K7L2mrU%2fKY1FxSgWLuk%3d">COMPLETED</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_pnlScroll">
+
+                            </div>
+                            <a href="UserControls/#"
+                               id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_anchorModalActivate"></a>
+
+                            <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalRemove_pnlScroll">
+
+                            </div>
+                            <a href="UserControls/#"
+                               id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalRemove_anchorModalActivate"></a>
+
+
+                            <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_pnlScroll">
+
+                            </div>
+                            <a href="UserControls/#"
+                               id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_anchorModalActivate"></a>
+
+
+                            <div id="modalAddApplication_foregroundElement"
+                                 style="display: none; position: fixed; z-index: 10001;">
+                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_pnlMessage"
+                                     class="modal-content" style="display:none;">
+
+                                    <div class="place-holder">
+
+                                        <div>
+                                            <span id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_lblContent"></span>
+                                        </div>
+                                        <div style="text-align:left;">
+
+                                            <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_updApplicant">
+
+                                                <h3>Add Derivative Applicant</h3>
+
+                                                <div>
+
+                                                </div>
+                                                <br>
+
+                                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_pnlStep1">
+
+                                                    <fieldset>
+                                                        <div class="field-groups">
+                                                            <div class="field-group">
+                                                                <div class="field full">
+                                                                    Relationship to Principal Applicant
+                                                                    <span id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_valRelationship"
+                                                                          style="visibility:hidden;"><img alt="Error"
+                                                                                                          src="_res/img/seriouswarning.png"
+                                                                                                          border="0"></span><br>
+                                                                    <select name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ddlRelationship"
+                                                                            onchange="javascript:setTimeout('__doPostBack(\'ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ddlRelationship\',\'\')', 0)"
+                                                                            id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ddlRelationship">
+                                                                        <option selected="selected" value="">-- Select
+                                                                            One --
+                                                                        </option>
+                                                                        <option value="SP">Spouse</option>
+                                                                        <option value="CH">Child</option>
+
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="field">
+                                                                    Surname
+                                                                    &nbsp;<br>
+                                                                    <input name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$txbSurname"
+                                                                           type="text" maxlength="33"
+                                                                           id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_txbSurname">
+                                                                </div>
+
+                                                                <div class="field">
+                                                                    Given Name
+                                                                    &nbsp;<br>
+                                                                    <input name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$txbGivenName"
+                                                                           type="text" maxlength="33"
+                                                                           id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_txbGivenName">
+                                                                </div>
+
+                                                                <div class="field">
+                                                                    Gender
+                                                                    &nbsp;<br>
+                                                                    <span class="RadioCheck">
+                            <table id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblGender">
+						<tbody><tr>
+							<td><input
+                                    id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblGender_0"
+                                    type="radio"
+                                    name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$rblGender"
+                                    value="M"><label
+                                    for="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblGender_0">Male</label></td><td><input
+                                id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblGender_1"
+                                type="radio"
+                                name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$rblGender"
+                                value="F"><label
+                                for="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblGender_1">Female</label></td>
+						</tr>
+					</tbody></table>
+                         </span>
+                                                                </div>
+
+                                                                <div class="field">
+                                                                    Date of Birth
+                                                                    &nbsp;
+                                                                    <div>
+                                                                        <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ucDob_updDates">
+
+                                                                            <div class="date">
+                                                                                <select name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ucDob$ddlDate"
+                                                                                        id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ucDob_ddlDate"
+                                                                                        listitemtype="Day">
+                                                                                    <option value=""></option>
+                                                                                    <option value="01">01</option>
+                                                                                    <option value="02">02</option>
+                                                                                    <option value="03">03</option>
+                                                                                    <option value="04">04</option>
+                                                                                    <option value="05">05</option>
+                                                                                    <option value="06">06</option>
+                                                                                    <option value="07">07</option>
+                                                                                    <option value="08">08</option>
+                                                                                    <option value="09">09</option>
+                                                                                    <option value="10">10</option>
+                                                                                    <option value="11">11</option>
+                                                                                    <option value="12">12</option>
+                                                                                    <option value="13">13</option>
+                                                                                    <option value="14">14</option>
+                                                                                    <option value="15">15</option>
+                                                                                    <option value="16">16</option>
+                                                                                    <option value="17">17</option>
+                                                                                    <option value="18">18</option>
+                                                                                    <option value="19">19</option>
+                                                                                    <option value="20">20</option>
+                                                                                    <option value="21">21</option>
+                                                                                    <option value="22">22</option>
+                                                                                    <option value="23">23</option>
+                                                                                    <option value="24">24</option>
+                                                                                    <option value="25">25</option>
+                                                                                    <option value="26">26</option>
+                                                                                    <option value="27">27</option>
+                                                                                    <option value="28">28</option>
+                                                                                    <option value="29">29</option>
+                                                                                    <option value="30">30</option>
+                                                                                    <option value="31">31</option>
+
+                                                                                </select>
+                                                                                <select name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ucDob$ddlMonth"
+                                                                                        id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ucDob_ddlMonth"
+                                                                                        listitemtype="Month">
+                                                                                    <option value=""></option>
+                                                                                    <option value="01">JAN</option>
+                                                                                    <option value="02">FEB</option>
+                                                                                    <option value="03">MAR</option>
+                                                                                    <option value="04">APR</option>
+                                                                                    <option value="05">MAY</option>
+                                                                                    <option value="06">JUN</option>
+                                                                                    <option value="07">JUL</option>
+                                                                                    <option value="08">AUG</option>
+                                                                                    <option value="09">SEP</option>
+                                                                                    <option value="10">OCT</option>
+                                                                                    <option value="11">NOV</option>
+                                                                                    <option value="12">DEC</option>
+
+                                                                                </select>
+                                                                                <input name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ucDob$txbYear"
+                                                                                       type="text" maxlength="4"
+                                                                                       id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ucDob_txbYear">
+
+                                                                                <div class="hint"><span
+                                                                                        id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ucDob_lblFormat">(Format: DD-MMM-YYYY)</span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="field full">
+                                                                    Country of Birth
+                                                                    &nbsp;<br>
+                                                                    <select name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$ddlPob"
+                                                                            id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_ddlPob">
+                                                                        <option value="">-- SELECT ONE --</option>
+                                                                        <option value="AFGH">AFGHANISTAN</option>
+                                                                        <option value="ALB">ALBANIA</option>
+                                                                        <option value="ALGR">ALGERIA</option>
+                                                                        <option value="ASMO">AMERICAN SAMOA</option>
+                                                                        <option value="ANDO">ANDORRA</option>
+                                                                        <option value="ANGL">ANGOLA</option>
+                                                                        <option value="ANGU">ANGUILLA</option>
+                                                                        <option value="ANTI">ANTIGUA AND BARBUDA
+                                                                        </option>
+                                                                        <option value="ARG">ARGENTINA</option>
+                                                                        <option value="ARM">ARMENIA</option>
+                                                                        <option value="ARB">ARUBA</option>
+                                                                        <option value="XAS">AT SEA</option>
+                                                                        <option value="ASTL">AUSTRALIA</option>
+                                                                        <option value="AUST">AUSTRIA</option>
+                                                                        <option value="AZR">AZERBAIJAN</option>
+                                                                        <option value="BAMA">BAHAMAS</option>
+                                                                        <option value="BAHR">BAHRAIN</option>
+                                                                        <option value="BANG">BANGLADESH</option>
+                                                                        <option value="BRDO">BARBADOS</option>
+                                                                        <option value="BYS">BELARUS</option>
+                                                                        <option value="BELG">BELGIUM</option>
+                                                                        <option value="BLZ">BELIZE</option>
+                                                                        <option value="BENN">BENIN</option>
+                                                                        <option value="BERM">BERMUDA</option>
+                                                                        <option value="BHU">BHUTAN</option>
+                                                                        <option value="BOL">BOLIVIA</option>
+                                                                        <option value="BON">BONAIRE</option>
+                                                                        <option value="BIH">BOSNIA-HERZEGOVINA</option>
+                                                                        <option value="BOT">BOTSWANA</option>
+                                                                        <option value="BRZL">BRAZIL</option>
+                                                                        <option value="IOT">BRITISH INDIAN OCEAN
+                                                                            TERRITORY
+                                                                        </option>
+                                                                        <option value="BRNI">BRUNEI</option>
+                                                                        <option value="BULG">BULGARIA</option>
+                                                                        <option value="BURK">BURKINA FASO</option>
+                                                                        <option value="BURM">BURMA</option>
+                                                                        <option value="BRND">BURUNDI</option>
+                                                                        <option value="CBDA">CAMBODIA</option>
+                                                                        <option value="CMRN">CAMEROON</option>
+                                                                        <option value="CAN">CANADA</option>
+                                                                        <option value="CAVI">CAPE VERDE</option>
+                                                                        <option value="CAYI">CAYMAN ISLANDS</option>
+                                                                        <option value="CAFR">CENTRAL AFRICAN REPUBLIC
+                                                                        </option>
+                                                                        <option value="CHAD">CHAD</option>
+                                                                        <option value="CHIL">CHILE</option>
+                                                                        <option value="CHIN">CHINA</option>
+                                                                        <option value="CHRI">CHRISTMAS ISLAND</option>
+                                                                        <option value="COCI">COCOS KEELING ISLANDS
+                                                                        </option>
+                                                                        <option value="COL">COLOMBIA</option>
+                                                                        <option value="COMO">COMOROS</option>
+                                                                        <option value="COD">CONGO, DEMOCRATIC REPUBLIC
+                                                                            OF THE
+                                                                        </option>
+                                                                        <option value="CONB">CONGO, REPUBLIC OF THE
+                                                                        </option>
+                                                                        <option value="CKIS">COOK ISLANDS</option>
+                                                                        <option value="CSTR">COSTA RICA</option>
+                                                                        <option value="IVCO">COTE D`IVOIRE</option>
+                                                                        <option value="HRV">CROATIA</option>
+                                                                        <option value="CUBA">CUBA</option>
+                                                                        <option value="CUR">CURACAO</option>
+                                                                        <option value="CYPR">CYPRUS</option>
+                                                                        <option value="CZEC">CZECH REPUBLIC</option>
+                                                                        <option value="DEN">DENMARK</option>
+                                                                        <option value="DJI">DJIBOUTI</option>
+                                                                        <option value="DOMN">DOMINICA</option>
+                                                                        <option value="DOMR">DOMINICAN REPUBLIC</option>
+                                                                        <option value="ECUA">ECUADOR</option>
+                                                                        <option value="EGYP">EGYPT</option>
+                                                                        <option value="ELSL">EL SALVADOR</option>
+                                                                        <option value="EGN">EQUATORIAL GUINEA</option>
+                                                                        <option value="ERI">ERITREA</option>
+                                                                        <option value="EST">ESTONIA</option>
+                                                                        <option value="ETH">ETHIOPIA</option>
+                                                                        <option value="FKLI">FALKLAND ISLANDS</option>
+                                                                        <option value="FRO">FAROE ISLANDS</option>
+                                                                        <option value="FIJI">FIJI</option>
+                                                                        <option value="FIN">FINLAND</option>
+                                                                        <option value="FRAN">FRANCE</option>
+                                                                        <option value="FRGN">FRENCH GUIANA</option>
+                                                                        <option value="FPOL">FRENCH POLYNESIA</option>
+                                                                        <option value="FSAT">FRENCH SOUTHERN AND
+                                                                            ANTARCTIC TERRITORIES
+                                                                        </option>
+                                                                        <option value="GABN">GABON</option>
+                                                                        <option value="GAM">GAMBIA, THE</option>
+                                                                        <option value="XGZ">GAZA STRIP</option>
+                                                                        <option value="GEO">GEORGIA</option>
+                                                                        <option value="GER">GERMANY</option>
+                                                                        <option value="GHAN">GHANA</option>
+                                                                        <option value="GIB">GIBRALTAR</option>
+                                                                        <option value="GRC">GREECE</option>
+                                                                        <option value="GRLD">GREENLAND</option>
+                                                                        <option value="GREN">GRENADA</option>
+                                                                        <option value="GUAD">GUADELOUPE</option>
+                                                                        <option value="GUAM">GUAM</option>
+                                                                        <option value="GUAT">GUATEMALA</option>
+                                                                        <option value="GNEA">GUINEA</option>
+                                                                        <option value="GUIB">GUINEA - BISSAU</option>
+                                                                        <option value="GUY">GUYANA</option>
+                                                                        <option value="HAT">HAITI</option>
+                                                                        <option value="HMD">HEARD AND MCDONALD ISLANDS
+                                                                        </option>
+                                                                        <option value="VAT">HOLY SEE (VATICAN CITY)
+                                                                        </option>
+                                                                        <option value="HOND">HONDURAS</option>
+                                                                        <option value="HOKO">HONG KONG BNO</option>
+                                                                        <option value="HNK">HONG KONG SAR</option>
+                                                                        <option value="XHI">HOWLAND ISLAND</option>
+                                                                        <option value="HUNG">HUNGARY</option>
+                                                                        <option value="ICLD">ICELAND</option>
+                                                                        <option value="XIR">IN THE AIR</option>
+                                                                        <option value="IND">INDIA</option>
+                                                                        <option value="IDSA">INDONESIA</option>
+                                                                        <option value="IRAN">IRAN</option>
+                                                                        <option value="IRAQ">IRAQ</option>
+                                                                        <option value="IRE">IRELAND</option>
+                                                                        <option value="ISRL">ISRAEL</option>
+                                                                        <option value="ITLY">ITALY</option>
+                                                                        <option value="JAM">JAMAICA</option>
+                                                                        <option value="JPN">JAPAN</option>
+                                                                        <option value="JRSM">JERUSALEM</option>
+                                                                        <option value="JORD">JORDAN</option>
+                                                                        <option value="KAZ">KAZAKHSTAN</option>
+                                                                        <option value="KENY">KENYA</option>
+                                                                        <option value="KIRI">KIRIBATI</option>
+                                                                        <option value="PRK">KOREA, DEMOCRATIC REPUBLIC
+                                                                            OF (NORTH)
+                                                                        </option>
+                                                                        <option value="KOR">KOREA, REPUBLIC OF (SOUTH)
+                                                                        </option>
+                                                                        <option value="KSV">KOSOVO</option>
+                                                                        <option value="KUWT">KUWAIT</option>
+                                                                        <option value="KGZ">KYRGYZSTAN</option>
+                                                                        <option value="LAOS">LAOS</option>
+                                                                        <option value="LATV">LATVIA</option>
+                                                                        <option value="LEBN">LEBANON</option>
+                                                                        <option value="LES">LESOTHO</option>
+                                                                        <option value="LIBR">LIBERIA</option>
+                                                                        <option value="LBYA">LIBYA</option>
+                                                                        <option value="LCHT">LIECHTENSTEIN</option>
+                                                                        <option value="LITH">LITHUANIA</option>
+                                                                        <option value="LXM">LUXEMBOURG</option>
+                                                                        <option value="MAC">MACAU</option>
+                                                                        <option value="MADG">MADAGASCAR</option>
+                                                                        <option value="MALW">MALAWI</option>
+                                                                        <option value="MLAS">MALAYSIA</option>
+                                                                        <option value="MLDI">MALDEN ISLAND</option>
+                                                                        <option value="MLDV">MALDIVES</option>
+                                                                        <option value="MALI">MALI</option>
+                                                                        <option value="MLTA">MALTA</option>
+                                                                        <option value="RMI">MARSHALL ISLANDS</option>
+                                                                        <option value="MART">MARTINIQUE</option>
+                                                                        <option value="MAUR">MAURITANIA</option>
+                                                                        <option value="MRTS">MAURITIUS</option>
+                                                                        <option value="MYT">MAYOTTE</option>
+                                                                        <option value="AGS">MEXICO - AGUASCALIENTES
+                                                                        </option>
+                                                                        <option value="BC">MEXICO - BAJA CALIFORNIA
+                                                                            NORTE
+                                                                        </option>
+                                                                        <option value="BCSR">MEXICO - BAJA CALIFORNIA
+                                                                            SUR
+                                                                        </option>
+                                                                        <option value="CAMP">MEXICO - CAMPECHE</option>
+                                                                        <option value="CHIS">MEXICO - CHIAPAS</option>
+                                                                        <option value="CHIH">MEXICO - CHIHUAHUA</option>
+                                                                        <option value="COAH">MEXICO - COAHUILA</option>
+                                                                        <option value="COLI">MEXICO - COLIMA</option>
+                                                                        <option value="DF">MEXICO - DISTRITO FEDERAL
+                                                                        </option>
+                                                                        <option value="DGO">MEXICO - DURANGO</option>
+                                                                        <option value="GTO">MEXICO - GUANAJUATO</option>
+                                                                        <option value="GRO">MEXICO - GUERRERO</option>
+                                                                        <option value="HGO">MEXICO - HIDALGO</option>
+                                                                        <option value="JAL">MEXICO - JALISCO</option>
+                                                                        <option value="MCH">MEXICO - MICHOACAN</option>
+                                                                        <option value="MOR">MEXICO - MORELOS</option>
+                                                                        <option value="NAY">MEXICO - NAYARIT</option>
+                                                                        <option value="NL">MEXICO - NUEVO LEON</option>
+                                                                        <option value="OAX">MEXICO - OAXACA</option>
+                                                                        <option value="PUE">MEXICO - PUEBLA</option>
+                                                                        <option value="QRO">MEXICO - QUERETARO</option>
+                                                                        <option value="QROO">MEXICO - QUINTANA ROO
+                                                                        </option>
+                                                                        <option value="SLP">MEXICO - SAN LUIS POTOSI
+                                                                        </option>
+                                                                        <option value="SIN">MEXICO - SINALOA</option>
+                                                                        <option value="SON">MEXICO - SONORA</option>
+                                                                        <option value="MXCO">MEXICO - STATE OF MEXICO
+                                                                        </option>
+                                                                        <option value="TAB">MEXICO - TABASCO</option>
+                                                                        <option value="TAMP">MEXICO - TAMAULIPAS
+                                                                        </option>
+                                                                        <option value="TLAX">MEXICO - TLAXCALA</option>
+                                                                        <option value="VER">MEXICO - VERACRUZ</option>
+                                                                        <option value="YUC">MEXICO - YUCATAN</option>
+                                                                        <option value="ZAC">MEXICO - ZACATECAS</option>
+                                                                        <option value="FSM">MICRONESIA</option>
+                                                                        <option value="MDWI">MIDWAY ISLANDS</option>
+                                                                        <option value="MLD">MOLDOVA</option>
+                                                                        <option value="MON">MONACO</option>
+                                                                        <option value="MONG">MONGOLIA</option>
+                                                                        <option value="MTG">MONTENEGRO</option>
+                                                                        <option value="MONT">MONTSERRAT</option>
+                                                                        <option value="MORO">MOROCCO</option>
+                                                                        <option value="MOZ">MOZAMBIQUE</option>
+                                                                        <option value="NAMB">NAMIBIA</option>
+                                                                        <option value="NAU">NAURU</option>
+                                                                        <option value="NEP">NEPAL</option>
+                                                                        <option value="NETH">NETHERLANDS</option>
+                                                                        <option value="NCAL">NEW CALEDONIA</option>
+                                                                        <option value="NZLD">NEW ZEALAND</option>
+                                                                        <option value="NIC">NICARAGUA</option>
+                                                                        <option value="NIR">NIGER</option>
+                                                                        <option value="NRA">NIGERIA</option>
+                                                                        <option value="NIUE">NIUE</option>
+                                                                        <option value="NFK">NORFOLK ISLAND</option>
+                                                                        <option value="MKD">NORTH MACEDONIA</option>
+                                                                        <option value="MNP">NORTH MARIANA ISLANDS
+                                                                        </option>
+                                                                        <option value="NIRE">NORTHERN IRELAND</option>
+                                                                        <option value="NORW">NORWAY</option>
+                                                                        <option value="OMAN">OMAN</option>
+                                                                        <option value="PKST">PAKISTAN</option>
+                                                                        <option value="PALA">PALAU</option>
+                                                                        <option value="PLMR">PALMYRA ATOLL</option>
+                                                                        <option value="PAN">PANAMA</option>
+                                                                        <option value="PNG">PAPUA NEW GUINEA</option>
+                                                                        <option value="PARA">PARAGUAY</option>
+                                                                        <option value="PERU">PERU</option>
+                                                                        <option value="PHIL">PHILIPPINES</option>
+                                                                        <option value="PITC">PITCAIRN ISLANDS</option>
+                                                                        <option value="POL">POLAND</option>
+                                                                        <option value="PORT">PORTUGAL</option>
+                                                                        <option value="PR">PUERTO RICO</option>
+                                                                        <option value="QTAR">QATAR</option>
+                                                                        <option value="REUN">REUNION</option>
+                                                                        <option value="ROM">ROMANIA</option>
+                                                                        <option value="RUS">RUSSIA</option>
+                                                                        <option value="RWND">RWANDA</option>
+                                                                        <option value="SABA">SABA ISLAND</option>
+                                                                        <option value="MAF">SAINT MARTIN</option>
+                                                                        <option value="WSAM">SAMOA</option>
+                                                                        <option value="SMAR">SAN MARINO</option>
+                                                                        <option value="STPR">SAO TOME AND PRINCIPE
+                                                                        </option>
+                                                                        <option value="SARB">SAUDI ARABIA</option>
+                                                                        <option value="SENG">SENEGAL</option>
+                                                                        <option value="SBA">SERBIA</option>
+                                                                        <option value="SEYC">SEYCHELLES</option>
+                                                                        <option value="SLEO">SIERRA LEONE</option>
+                                                                        <option value="SING">SINGAPORE</option>
+                                                                        <option value="STM">SINT MAARTEN</option>
+                                                                        <option value="SVK">SLOVAKIA</option>
+                                                                        <option value="SVN">SLOVENIA</option>
+                                                                        <option value="SLMN">SOLOMON ISLANDS</option>
+                                                                        <option value="SOMA">SOMALIA</option>
+                                                                        <option value="SAFR">SOUTH AFRICA</option>
+                                                                        <option value="SGS">SOUTH GEORGIA AND THE SOUTH
+                                                                            SANDWICH ISLAND
+                                                                        </option>
+                                                                        <option value="SSDN">SOUTH SUDAN</option>
+                                                                        <option value="SPN">SPAIN</option>
+                                                                        <option value="SRL">SRI LANKA</option>
+                                                                        <option value="STBR">ST. BARTHELEMY</option>
+                                                                        <option value="STEU">ST. EUSTATIUS</option>
+                                                                        <option value="SHEL">ST. HELENA</option>
+                                                                        <option value="STCN">ST. KITTS AND NEVIS
+                                                                        </option>
+                                                                        <option value="SLCA">ST. LUCIA</option>
+                                                                        <option value="SPMI">ST. PIERRE AND MIQUELON
+                                                                        </option>
+                                                                        <option value="STVN">ST. VINCENT AND THE
+                                                                            GRENADINES
+                                                                        </option>
+                                                                        <option value="XXX">STATELESS</option>
+                                                                        <option value="SNTD">STATUS NEUTRAL TRAVEL
+                                                                            DOCUMENT
+                                                                        </option>
+                                                                        <option value="SUDA">SUDAN</option>
+                                                                        <option value="SURM">SURINAME</option>
+                                                                        <option value="SJM">SVALBARD</option>
+                                                                        <option value="SZLD">ESWATINI</option>
+                                                                        <option value="SWDN">SWEDEN</option>
+                                                                        <option value="SWTZ">SWITZERLAND</option>
+                                                                        <option value="SYR">SYRIA</option>
+                                                                        <option value="TWAN">TAIWAN</option>
+                                                                        <option value="TJK">TAJIKISTAN</option>
+                                                                        <option value="TAZN">TANZANIA</option>
+                                                                        <option value="THAI">THAILAND</option>
+                                                                        <option value="TMOR">TIMOR-LESTE</option>
+                                                                        <option value="TOGO">TOGO</option>
+                                                                        <option value="TKL">TOKELAU</option>
+                                                                        <option value="TONG">TONGA</option>
+                                                                        <option value="TRIN">TRINIDAD AND TOBAGO
+                                                                        </option>
+                                                                        <option value="TNSA">TUNISIA</option>
+                                                                        <option value="TRKY">TURKEY</option>
+                                                                        <option value="TKM">TURKMENISTAN</option>
+                                                                        <option value="TCIS">TURKS AND CAICOS ISLANDS
+                                                                        </option>
+                                                                        <option value="TUV">TUVALU</option>
+                                                                        <option value="UGAN">UGANDA</option>
+                                                                        <option value="UKR">UKRAINE</option>
+                                                                        <option value="UAE">UNITED ARAB EMIRATES
+                                                                        </option>
+                                                                        <option value="GRBR">UNITED KINGDOM</option>
+                                                                        <option value="USA">UNITED STATES OF AMERICA
+                                                                        </option>
+                                                                        <option value="URU">URUGUAY</option>
+                                                                        <option value="UZB">UZBEKISTAN</option>
+                                                                        <option value="VANU">VANUATU</option>
+                                                                        <option value="VENZ">VENEZUELA</option>
+                                                                        <option value="VTNM">VIETNAM</option>
+                                                                        <option value="VI">VIRGIN ISLANDS (U.S.)
+                                                                        </option>
+                                                                        <option value="BRVI">VIRGIN ISLANDS, BRITISH
+                                                                        </option>
+                                                                        <option value="WKI">WAKE ISLAND</option>
+                                                                        <option value="WAFT">WALLIS AND FUTUNA ISLANDS
+                                                                        </option>
+                                                                        <option value="XWB">WEST BANK</option>
+                                                                        <option value="SSAH">WESTERN SAHARA</option>
+                                                                        <option value="YEM">YEMEN</option>
+                                                                        <option value="ZAMB">ZAMBIA</option>
+                                                                        <option value="ZIMB">ZIMBABWE</option>
+
+                                                                    </select>
+                                                                </div>
+
+                                                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_pnlStatus"
+                                                                     class="field full">
+
+                                                                    The derivative applicant will (select one below):
+                                                                    &nbsp;<br>
+                                                                    <span class="RadioCheck">
+                            <table id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblStatus">
+							<tbody><tr>
+								<td><input
+                                        id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblStatus_0"
+                                        type="radio"
+                                        name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$rblStatus"
+                                        value="A"><label
+                                        for="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblStatus_0">Accompany the principal applicant to the United States</label></td>
+							</tr><tr>
+								<td><input
+                                        id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblStatus_1"
+                                        type="radio"
+                                        name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$rblStatus"
+                                        value="J"><label
+                                        for="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_rblStatus_1">Follow to join the principal applicant in the United States at a later date.</label></td>
+							</tr>
+						</tbody></table>
+                        </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </fieldset>
+
+                                                </div>
+                                                <br><br>
+                                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_pnlAction">
+
+                                                    <input type="submit"
+                                                           name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$btnSubmit"
+                                                           value="Submit"
+                                                           onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$btnSubmit&quot;, &quot;&quot;, true, &quot;subGroup&quot;, &quot;&quot;, false, false))"
+                                                           id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_btnSubmit"
+                                                           class="blankbluebutton2" style="width:150px;">
+                                                    <input type="submit"
+                                                           name="ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$btnCancel"
+                                                           value="Cancel"
+                                                           onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucApplicants$ucModalAdd$ctl00$ucAddForm$btnCancel&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                                                           id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalAdd_ctl00_ucAddForm_btnCancel"
+                                                           class="blankbluebutton2" style="width:150px;">
+
+                                                </div>
+                                                <br>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="modalAddApplication_backgroundElement" class="modalBackground"
+                                 style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div>
+                            <div id="modalRemoveApplicant_foregroundElement"
+                                 style="display: none; position: fixed; z-index: 10001;">
+                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalRemove_pnlMessage"
+                                     class="modal-content" style="display:none;">
+
+                                    <div class="place-holder">
+
+                                        <div>
+                                            <span id="ctl00_SiteContentPlaceHolder_ucApplicants_ucModalRemove_lblContent"></span>
+                                        </div>
+                                        <div style="text-align:left;">
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="modalRemoveApplicant_backgroundElement" class="modalBackground"
+                                 style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div>
+                            <div id="modalConfirmTravelStatus_foregroundElement"
+                                 style="display: none; position: fixed; z-index: 10001;">
+                                <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_pnlMessage"
+                                     class="modal-content" style="display:none;">
+
+                                    <div class="place-holder">
+
+                                        <div>
+                                            <span id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_lblContent"></span>
+                                        </div>
+                                        <div style="text-align:left;">
+
+                                            <span id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_ctl00_lblContent"></span>
+                                            <div id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_ctl00_pnlAction"
+                                                 style="margin:40px 0 0 70px;">
+
+                                                <input type="submit"
+                                                       name="ctl00$SiteContentPlaceHolder$ucApplicants$ucConfirm$ucModalPanel$ctl00$btnSubmit"
+                                                       value="Continue"
+                                                       onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucApplicants$ucConfirm$ucModalPanel$ctl00$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                                                       id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_ctl00_btnSubmit"
+                                                       class="blankbluebutton2" style="width:150px;">
+                                                <input type="submit"
+                                                       name="ctl00$SiteContentPlaceHolder$ucApplicants$ucConfirm$ucModalPanel$ctl00$btnCancel"
+                                                       value="Cancel"
+                                                       onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucApplicants$ucConfirm$ucModalPanel$ctl00$btnCancel&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                                                       id="ctl00_SiteContentPlaceHolder_ucApplicants_ucConfirm_ucModalPanel_ctl00_btnCancel"
+                                                       class="blankbluebutton2" style="width:150px;">
+
+                                            </div>
+                                            <br>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="modalConfirmTravelStatus_backgroundElement" class="modalBackground"
+                                 style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="ctl00_SiteContentPlaceHolder_updConfirm">
+
+
+                    <div id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_pnlScroll">
+
+                    </div>
+                    <a href="UserControls/#" id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_anchorModalActivate"></a>
+
+
+                    <div id="modalSummaryConfirm_foregroundElement"
+                         style="display: none; position: fixed; z-index: 10001;">
+                        <div id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_pnlMessage" class="modal-content"
+                             style="display:none;">
+
+                            <div class="place-holder">
+                                <h3 id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_h2Title">
+                                    <span id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_lblTitle">Request Sent</span>
+                                </h3>
+                                <div>
+                                    <span id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_lblContent"></span>
+                                </div>
+                                <div style="text-align:left;">
+
+                                    <span id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_ctl00_lblProcessed"></span>
+
+                                    <div style="margin-top:30px; margin-bottom:10px; text-align:center;">
+                                        <a onclick="SetValidNav();"
+                                           id="ctl00_SiteContentPlaceHolder_ucConfirmDisplay_ctl00_lnkClose"
+                                           href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SiteContentPlaceHolder$ucConfirmDisplay$ctl00$lnkClose&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Close</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="modalSummaryConfirm_backgroundElement" class="modalBackground"
+                         style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div>
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_pnlSiteInfo">
+            <div id="siteinfo">
+                <div id="siteinfo-legal">
+                    <p>
+                        <span id="ctl00_siteinfoLabel">This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External links to other Internet sites should not be construed as an endorsement of the views contained therein. </span><br/>
+                        <a id="ctl00_hplCopyright" href="https://ceac.state.gov/ceac/Common/Copyright.aspx"
+                           target="_ceac">Copyright Information</a>
+                        &nbsp;
+                        <a id="ctl00_hplDisclaimers" href="https://ceac.state.gov/ceac/Common/Disclaimer.aspx"
+                           target="_ceac">Disclaimers</a>
+                        &nbsp;
+                        <span style="float: right;">
+                            <span id="ctl00_lblIP" tabindex="6050" style="background-color:LightGrey;font-size:0.6em;">(223)</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        var ctl00_SiteContentPlaceHolder_ValidationSummarySecond = document.all ? document.all["ctl00_SiteContentPlaceHolder_ValidationSummarySecond"] : document.getElementById("ctl00_SiteContentPlaceHolder_ValidationSummarySecond");
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.headertext = "Sign In Failed";
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.validationGroup = "Login";
+        var ctl00_SiteContentPlaceHolder_cvCaseNo = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvCaseNo"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvCaseNo");
+        ctl00_SiteContentPlaceHolder_cvCaseNo.display = "None";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValTextLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValTextLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValTextLogin");
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValDoBLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValDoBLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValDoBLogin");
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValFourthField = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValFourthField"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValFourthField");
+        ctl00_SiteContentPlaceHolder_cvValFourthField.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValCaptchaLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValCaptchaLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValCaptchaLogin");
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        //]]>
+    </script>
+</form>
+</body>
+</html>

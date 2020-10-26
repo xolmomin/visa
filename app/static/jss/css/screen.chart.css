@@ -1,0 +1,172 @@
+div.family-based
+{
+	min-width:675px;
+	min-height:135px;
+	background:#fff url(../img/bg_ivprocess_fam.png) no-repeat;
+}
+
+div.family-based div
+{
+	float:left;
+	position:absolute;
+	height:37px!important;
+	text-align:center;
+	vertical-align:middle;	
+	padding-top:8px;
+	background-color:#477fca;
+}
+
+div.family-based, div.expedited  a
+{
+	color:#fff;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+div.family-based a:hover
+{
+	text-decoration:underline;
+}
+
+div.family-based .agent
+{	
+	margin:39px 0 0 1px;	
+	width:98px;
+}
+
+div.family-based .aos-fee
+{	
+	margin:5px 0 0 108px;	
+	width:130px;
+}
+
+div.family-based .aos-docs
+{	
+	margin:5px 0 0 246px;	
+	width:172px;
+}
+
+div.family-based .nvc-review
+{	
+	margin:39px 0 0 427px;	
+	width:98px
+}
+
+div.family-based .schedule
+{	
+	margin:39px 0 0 535px;	
+	width:130px;
+}
+
+div.family-based .iv-fee
+{	
+	margin:75px 0 0 108px;	
+	width:98px;
+}
+
+div.family-based .ds260
+{	
+	margin:75px 0 0 214px;	
+	width:98px;
+}
+
+div.family-based .civil-docs
+{	
+	margin:75px 0 0 320px;	
+	width:98px;
+}
+
+div.aos-exempt
+{
+	min-width:675px;
+	min-height:65px;
+	background:#fff url(../img/bg_ivprocess_exempt.png) no-repeat;
+}
+
+div.aos-exempt-pivot
+{
+	min-width:675px;
+	min-height:65px;
+	background:#fff url(../img/bg_ivprocess_exempt_pivot.png) no-repeat;
+}
+
+div.aos-partial-exempt
+{
+	min-width:579px;
+	min-height:125px;
+	background:#fff url(../img/bg_ivprocess_part_exempt.png) no-repeat;
+}
+
+div.special-imm
+{
+	min-width:675px;
+	min-height:65px;
+	background:#fff url(../img/bg_ivprocess_special.png) no-repeat;
+}
+
+div.refugees
+{
+	min-width:485px;
+	min-height:65px;
+	background:#fff url(../img/bg_ivprocess_refugees.png) no-repeat;
+}
+
+div.expedited
+{
+	min-width:675px;
+	min-height:65px;
+	background:#fff url(../img/bg_ivprocess_expedited.png) no-repeat;
+}
+
+div.expedited div
+{
+	float:left;
+	position:absolute;
+	width:147px;
+	height:43px!important;
+	text-align:center;
+	vertical-align:middle;	
+	padding-top:10px;
+	margin-top:6px;
+	background-color:#477fca;
+}
+
+div.expedited div.ds260
+{
+	margin-left:5px;
+}
+
+div.M102
+{
+	min-width:675px;
+	min-height:200px;
+	background:#fff url(../img/bg_ivprocess_M102.png) no-repeat;
+}
+
+div.M103
+{
+	min-width:675px;
+	min-height:200px;
+	background:#fff url(../img/bg_ivprocess_M103.png) no-repeat;
+}
+
+div.M109
+{
+	min-width:675px;
+	min-height:100px;
+	background:#fff url(../img/bg_ivprocess_M109.png) no-repeat;
+}
+
+div.M115
+{
+	min-width:675px;
+	min-height:150px;
+	background:#fff url(../img/bg_ivprocess_M115.png) no-repeat;
+}
+
+div.M116
+{
+	min-width:675px;
+	min-height:200px;
+	background:#fff url(../img/bg_ivprocess_M116.png) no-repeat;
+}

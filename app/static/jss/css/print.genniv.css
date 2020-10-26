@@ -1,0 +1,154 @@
+#nav-global { display: none; }
+#buttons { display: none; }
+#hideobject { display: none; }
+#siteinfo { display: none; }
+#siteinfo-legal { display: none; }
+
+body {
+	font-size:11px;
+}
+
+/* table CSS */
+table.review {
+	border-collapse: collapse;
+}
+	fieldset img {
+		border: 1px solid #e5ddca;
+	}
+	table.review th {
+		text-align: left;
+		font-weight: normal;
+		vertical-align: top;
+		padding: 3px 5px;
+	}
+	
+	table.review td {
+		vertical-align: top;
+		padding: 3px 5px;
+	} 
+	
+		table.review tr.header th,
+		tr.header td {
+			border-top: 1px solid #888888;
+			color: #273368;
+			text-align: right;
+		}
+		table.review tr.header th {
+			padding: 3px 0;
+			text-align: left;
+		}
+	table.review tr.header th {
+		font-weight: bold;
+	}
+	table.review tr.header a {
+		text-decoration: none;
+	}
+	table.review tr.header a:hover {
+		text-decoration: underline;
+	}
+	table.review tr.even {
+		background-color: #dddddd;
+	}
+	table.review tr.photo {
+		background-color: transparent !important;
+	}
+    
+    table.review tr.photo th{
+		 width: 200px;
+	}
+	
+	table.reviewdetail {
+		 width: 400px;
+	}
+	
+	table.reviewdetail tr.even {
+		background-color: #dddddd;
+	}
+	
+	table.reviewdetail td {
+		vertical-align: top;
+		padding: 3px 5px;
+		width: 150px;
+	} 
+	
+	table.reviewdetail th {
+		text-align: left;
+		font-weight: normal;
+		vertical-align: top;
+		padding: 3px 5px;
+		width: 150px;
+	}
+	
+table.Printreview {
+	border-collapse: collapse;
+}
+	fieldset img {
+		border: 1px solid #e5ddca;
+	}
+	table.Printreview th {
+		text-align: left;
+		font-weight: normal;
+		vertical-align: top;
+		padding: 3px 5px;
+	}
+	
+	table.Printreview td {
+		vertical-align: top;
+		padding: 3px 5px;
+	} 
+	
+		table.Printreview tr.header th,
+		tr.header td {
+			border-top: 1px solid #888888;
+			color: #273368;
+			text-align: right;
+		}
+		table.Printreview tr.header th {
+			padding: 3px 0;
+			text-align: left;
+		}
+	table.Printreview tr.header th {
+		font-weight: bold;
+	}
+	table.Printreview tr.header a {
+		text-decoration: none;
+	}
+	table.Printreview tr.header a:hover {
+		text-decoration: underline;
+	}
+	table.Printreview tr.even {
+		background-color: #dddddd;
+	}
+	table.Printreview tr.photo {
+		background-color: transparent !important;
+	}
+    
+    table.Printreview tr.photo th{
+		 width: 200px;
+	}
+	
+	table.Printreviewdetail {
+		 width: 500px;
+	}
+	
+	table.Printreviewdetail tr.even {
+		background-color: #dddddd;
+	}
+	
+	table.Printreviewdetail td {
+		vertical-align: top;
+		padding: 3px 5px;
+		width: 250px;
+	} 
+	
+	table.Printreviewdetail th {
+		text-align: left;
+		font-weight: normal;
+		vertical-align: top;
+		padding: 3px 5px;
+		width: 250px;
+	}
+	div.hideobject
+	{
+	    display:none;
+	}

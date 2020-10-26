@@ -1,0 +1,406 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Electronic Diversity Visa Program
+    </title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link href="{% static '/jss/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/css/bootstrap-theme.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/edv.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/css/main.css' %}" rel="stylesheet"/>
+    <script type="text/javascript" src="{% static '/jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/jss/js/bootstrap.min.js' %}"></script>
+
+    <!--[if lt IE 9]>
+    <script src="/jss/html5shiv.min.js"></script>
+    <script src="/jss/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="escbodytag" role="document">
+<form name='form1' method="post" action="{% url 'check' %}" onsubmit="javascript:return checking();"
+      id="escform">
+    {% csrf_token %}
+    <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="bg-primary">
+        <div class="container" id="header">
+            <div class="row hidden-xs">
+                <div class="col-sm-8">
+                    <div class="inline-block valign-middle">
+                        <a href="http://www.state.gov" target="_blank" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="inline-block valign-middle text-center">
+                        <h4 class="m2222">U.S. Department of State</h4>
+                        <h5 class="m2222">Bureau of Consular Affairs</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="inline-block valign-middle pull-right mt5">
+                        <h4 class="text-right m2222">Electronic Diversity Visa</h4>
+                        <h5 class="text-right m2222">Entrant Status Check: 5.5</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <div class="inline-block">
+                        <a href="http://www.state.gov" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="pull-right inline-block valign-middle text-right mt2">
+                        <h5 class="m2222">U.S. Department of State</h5>
+                        <h6 class="m2222">Bureau of Consular Affairs</h6>
+                        <h6 class="m2222">eDV ESC: 5.5</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="link">
+        <div class="row">
+            <div class="col-sm-12 text-right mt5">
+        <span class="">
+
+
+          <a href="./Help.aspx" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help
+          </a>
+
+
+          <a href="{% url 'index' %}" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+          </a>
+
+        </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main" role="main">
+        {% if enter_form.errors %}
+        <div class="row">
+            <div class="col-sm-12 mt20">
+                <div class="alert alert-warning" role="alert">
+                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Warning:</span>
+                    The information entered is not valid.<br><br>Please review the Confirmation Number, your Last/Family
+                    Name, and Year of Birth to ensure you have entered them exactly as they appear on your DV
+                    Confirmation Page, including punctuation.<br><br>Several characters are often confused:<br>0 = zero,
+                    O = letter 'O', 1 = one, I = letter 'I' (like 'Ice'), 5 = five, S = letter 'S', 6 = six, G = letter
+                    'G', 8 = eight, B = letter 'B'
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-header text-center mt0 mb10">
+                    <h3>Enter Entrant Information</h3>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        1. Confirmation Number:
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                <span id="helpConfirmationNumber" class="help-block" aria-describedby="txtCN">
+                  In the space below, type the confirmation number that was given when you applied.
+                </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group m0050">
+                                <label class="sr-only" for="confirm">Confirmation Number</label>
+                                <input name="confirm" maxlength="16"
+                                       id="txtCN" onchange="PrePopName()"
+                                       class="form-control" type="text" placeholder="2021xxxxxxxxxxxx"/>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <span id="ConfirmationNumberValidator" class="validatortext"
+                                  style="color:red; display:none;">Invalid Confirmation Number: Please enter the correct confirmation number that is 16 characters long (example: 20211O0DZWY3DOV9)
+                            </span>
+                            <span id="ConfirmationNumberRequired" class="validatortext"
+                                  style="color:red; display:none;">
+                                    Confirmation Number is required.
+                                </span>
+                            <span id="txtCNValidator" class="validatortext" style="display:none;">
+                            </span>
+                        </div>
+                        <div class="col-sm-12">
+                            <a href="https://dvprogram.state.gov/ESC/(S(2itb244ugq1mjeus553lg2jy))/CheckConfirmation.aspx"
+                               class="small ml5">Forgot Confirmation Number</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="name">
+                    <div class="panel-heading">
+                        2. Last/Family Name:
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                <span id="helpLastName" class="help-block" aria-describedby="txtLastName">
+                  Provide the Last/Family Name that was used on the Electronic Diversity Visa Entry Form, including punctuation.
+                </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group m0050">
+                                <label class="sr-only" for="lastname">Last/Family name</label>
+                                <input name="lastname" maxlength="33" id="lastname"
+                                       class="form-control" type="text" aria-label="Last/Family name"/>
+                            </div>
+                        </div>
+                        {% if enter_form.name.errors %}
+                            <div class="col-sm-12">
+                                <span id="txtLastNameValidator" class="validatortext" style="color:red;">You must provide a valid Last/Family Name<br></span>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        3. Year of Birth:
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                <span id="helpyob" class="help-block" aria-describedby="txtYOB">
+                  Provide the year of birth for the primary entrant.
+                </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group m0050">
+                                <label class="sr-only" for="birth">Year of birth</label>
+                                <input name="birth" maxlength="4" id="txtYOB"
+                                       class="form-control" type="text" placeholder="yyyy"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <span id="YOBrequired" class="validatortext"
+                                  style="display:none;">Year of Birth is required</span><span id="YOBrange"
+                                                                                              class="validatortext"
+                                                                                              style="display:none;">Invalid year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        4. Authentication
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            <span class="help-block">
+                              Type the characters as they appear in the picture.
+                            </span>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="pull-left">
+                                    <label class="sr-only" for="btnCSubmit">Enter captcha code</label>
+                                    <div class="LBD_CaptchaDiv " id="c_checkstatus_uccaptcha30_CaptchaDiv"
+                                         style="width: 260px !important; height: 55px !important; ">
+                                        <div class="LBD_CaptchaImageDiv" id="c_checkstatus_uccaptcha30_CaptchaImageDiv"
+                                             style="width: 230px !important; height: 2px !important;">
+                                            <img class="LBD_CaptchaImage" id="c_checkstatus_uccaptcha30_CaptchaImage"
+                                                 style="width: 230px !important; height: 55px !important;"
+                                                 src="{% static 'code.png' %}"
+                                                 alt="CAPTCHA"/>
+                                            <input type="hidden" name="org_captcha" id="org_captcha"
+                                                   value="{{ code }}"/>
+                                        </div>
+                                        <div class="LBD_CaptchaIconsDiv" id="c_checkstatus_uccaptcha30_CaptchaIconsDiv"
+                                             style="width: 24px !important;margin-left: 230px !important;"><!--
+   --><a class="LBD_ReloadLink" id="c_checkstatus_uccaptcha30_ReloadLink" href="#"
+         onclick="c_checkstatus_uccaptcha30.ReloadImage(); this.blur(); return false;"
+         title="Change the CAPTCHA code"><img class="LBD_ReloadIcon" id="c_checkstatus_uccaptcha30_ReloadIcon"
+                                              style="margin: 2px 2px !important;"
+                                              src="{% static 'jss/icon/BotDetectCaptchaRefresh.gif' %}"
+                                              alt="Change the CAPTCHA code"/></a><!--
+   --><a class="LBD_SoundLink" id="c_checkstatus_uccaptcha30_SoundLink"
+         href="/ESC/(S(qrweefboszhiilq10u0jcihs))/BotDetectCaptcha.ashx?get=sound&amp;c=c_checkstatus_uccaptcha30&amp;t=1f180fc4858e45689524b1d3fa0f0e2e&amp;s=eO60Vk2WV06ItlQPZNBAp7aTArNxMI1AE2Uad%2bVdwUEMslvZiYq3Ynvq%2b2669i%2bSqimjgFEHZd6%2fHehg9xwZLw%3d%3d"
+         onclick="c_checkstatus_uccaptcha30.PlaySound(); this.blur(); return false;" title="Speak the CAPTCHA code"><img
+                                                class="LBD_SoundIcon" id="c_checkstatus_uccaptcha30_SoundIcon"
+                                                style="margin: 2px 2px !important;"
+                                                src="{% static 'jss/icon/BotDetectCaptchaSound.gif' %}"
+
+                                                alt="Speak the CAPTCHA code"/>
+                                        </a>
+                                            <div class="LBD_Placeholder"
+                                                 id="c_checkstatus_uccaptcha30_AudioPlaceholder">&nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 m9090">
+                            <div class="form-group m0050">
+                                <input name="captcha" type="text" id="txtCodeInput"
+                                       class="form-control"/>
+                            </div>
+                            <div class="col-sm-12">
+                                <span id="ValidatorCaptchaAllCS" class="validatortext" style="display:none;">Please enter the code as you see or hear it.</span><span
+                                    id="ValidatorCaptchaCaptchaCS" class="validatortext" style="display:none;">Please enter the code as you see or hear it.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <input type="submit" name="ctl00$mainCPH$btnCSubmit" value="Submit"
+                           onsubmit="WebForm_OnSubmit()"
+                           id="btnCSubmit" class="btn btn-primary ml32 mr5" type="submit"/><input type="submit"
+                                                                                                  name="ctl00$mainCPH$btnCCancel"
+                                                                                                  value="Cancel"
+                                                                                                  id="btnCCancel"
+                                                                                                  class="btn btn-primary"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span id="lblMsg" class="validatortext"></span>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container" id="footer">
+            <hr class="hideme">
+            <p class="small hideme">
+                <b>PAPERWORK REDUCTION ACT:</b>
+                Public reporting burden for this collection of information is estimated to average 30 minutes per
+                response, including time required for searching existing data sources, gathering the necessary
+                documentation, providing the information and/or documents required, and reviewing the final collection.
+                You do not have to supply this information unless this collection displays a currently valid OMB control
+                number. If you have comments on the accuracy of this burden estimate and/or recommendations for reducing
+                it, please send them to: PRA_BurdenComments@state.gov.
+            </p>
+            <p class="small hideme">
+                <b>CONFIDENTIALITY STATEMENT:</b>
+                INA Section 222(f) provides that visa issuance and refusal records shall be confidential and shall be
+                used only for the formulation, amendment, administration, or enforcement of the immigration,
+                nationality, and other laws of the United States. Certified copies of visa records may be made available
+                to a court which certifies that the information contained in such records is needed in a case pending
+                before the court.
+            </p>
+            <p class="small hideme">
+                <b>PRIVACY POLICY:</b> For information on the Department of State’s privacy policy, regarding the
+                nature, purpose, use, and sharing of any Personally Identifiable Information (PII) collected via this
+                website please <a href="https://www.state.gov/privacy-policy" target="_blank">click here</a>.<br>
+            </p>
+            <hr>
+            <div class="row hidden-xs">
+                <div class="col-sm-12 text-center mb5">
+                    <a href="http://www.usa.gov" class="" target="_blank">
+                        <img alt="USA Gov" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                    <a href="http://travel.state.gov" target="_blank" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="{% url 'index' %}" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="http://www.usa.gov">
+                        <img alt="USA Gov" class="mb10" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a href="http://travel.state.gov" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="{% url 'index' %}" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="">
+                        <small>
+                            This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External
+                            links to other Internet sites should not be construed as an endorsement of the views
+                            contained therein.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jss/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jss/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'jss/js/common.js' %}"></script>
+    <script>
+
+        $(function () {
+            $("form[name='form1']").validate({
+                rules: {
+                    confirm: {
+                        required: true
+                    },
+                    lastname: "required",
+                    birth: {
+                        required: true,
+                        number: true,
+                        min: 1900,
+                        max: 2010
+                    },
+                    CodeInput: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    confirm: {
+                        required: "Confirmation Number is required.",
+                    },
+                    lastname: "You must provide a valid Last/Family Name",
+                    birth: {
+                        required: "Year of Birth is required",
+                        number: "Invalid year",
+                        min: "Invalid year",
+                        max: "Invalid year",
+                    },
+                    CodeInput: {
+                        required: "Please enter the code as you see or hear it.",
+                    },
+                },
+
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+        });
+
+    </script>
+
+</form>
+</body>
+</html>

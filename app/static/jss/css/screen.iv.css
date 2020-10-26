@@ -1,0 +1,2131 @@
+/* all Domestic Visa Form classes should preced with "genniv-" so no overlap occurs and to easily identify an app specific class in the code */
+
+div.agnato-pid input {
+    width: 5em !important;
+}
+
+p.agnato-action {
+    text-align: center;
+    padding: 20px 0 30px 0;
+    margin: 0;
+}
+
+a:visited {
+    text-decoration: underline;
+}
+
+/* Form Number and Estimated Burden */
+div.burden {
+    position: relative;
+    font-size: 9px;
+}
+
+div.burden table {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 350px;
+}
+
+* html div.burden table {
+    right: 20px;
+}
+
+div.burden tr {
+    background-color: transparent;
+}
+
+div.burden td,
+div.burden th {
+    text-align: right;
+    padding: 1px;
+    color: #666;
+}
+
+div.burden td + td {
+    font-weight: bold;
+}
+
+div.burden td.case {
+    color: #790000;
+}
+
+div.shadow {
+    /*background: url(../img/shadow2.gif) no-repeat left bottom;*/
+}
+
+#tools {
+    position: relative;
+    height: 1px;
+}
+
+#tools-login {
+    position: absolute;
+    top: -30px;
+    right: 24px;
+    width: 300px;
+    font-family: Times, serif;
+    font-size: 12px;
+    color: #fff;
+    text-align: right;
+}
+
+#tools-login p {
+    margin: 0;
+    padding: 0;
+}
+
+#tools-login a {
+    color: #fff;
+}
+
+/* this is for nonJS browsers */
+#nav-main a {
+    /* color: #000;*/
+    color: #1c2960;
+    text-decoration: none;
+}
+
+#nav-main a[disabled=true] {
+    color: #959595;
+    text-decoration: none;
+}
+
+#nav-main a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#nav-main li.on {
+    background-color: #b80b01;
+    color: #fff;
+}
+
+#nav-main li.off {
+    background-color: #b80b01;
+    color: #fff;
+}
+
+/* end nonJS browser CSS */
+
+#nav-main li {
+    width: 188px;
+    float: left;
+    text-align: center;
+    background-color: #ddd;
+    padding: 5px 0 0 0;
+    height: 21px;
+    padding: 0;
+    position: relative;
+    list-style: none;
+}
+
+
+#nav-main li a.main {
+    width: 188px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 3px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../main-nav2.png);
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#nav-main a:hover {
+    color: #881502;
+    text-decoration: none;
+}
+
+#nav-main li.on a:hover {
+    color: #fff;
+}
+
+#nav-main li.on a {
+    background-position: 0 -21px;
+    color: #fff;
+}
+
+#nav-main li.off a:hover {
+    color: #fff;
+}
+
+#nav-main li.off a {
+    background-position: 0 -42px;
+    color: #d4e3f0;
+}
+
+#nav-sidebar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 158px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 56px;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 0px;
+}
+
+/*Code to fix the left margin for the navigation in versions of IE prior to IE7*/
+* html #nav-sidebar {
+    margin-left: -35px;
+}
+
+/*Code to fix the left margin for the navigation in IE7*/
+* + html #nav-sidebar {
+    margin-left: -35px;
+}
+
+/*Code to fix the left margin for the navigation in Opera*/
+@media all and(min-width: 0px) {
+    #nav-sidebar {
+        margin-left: 7px;
+    }
+}
+
+#nav-sidebar ul.nav-side1 {
+    text-align: left;
+    padding: 0;
+    height: auto;
+    float: none;
+    list-style: none;
+    background-color: White;
+    /* padding-bottom: 225px; */
+    /*!* background: url(../img/design/bg-nav-ul.png) bottom right no-repeat; *!*/
+}
+
+#nav-sidebar ul.nav-side1 li {
+    top: 56px;
+    text-align: left;
+    padding: 0;
+    height: auto;
+    float: none;
+    border-bottom: 2px solid #fff;
+    background-color: silver;
+    width: 158px;
+    vertical-align: middle;
+}
+
+* + html #nav-sidebar ul.nav-side1 li {
+    float: left;
+}
+
+* html #nav-sidebar ul.nav-side1 li a {
+    height: 1%;
+}
+
+#nav-sidebar ul.nav-side1 li a {
+    padding: 6px 17px 6px 17px;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    /* color: #fff; */
+    color: #708090;
+    text-decoration: none;
+}
+
+#nav-sidebar ul.nav-side1 li.on a {
+    /*background: url(../img/design/bg-nav-a-on.gif) 145px 7px no-repeat;*/
+}
+
+#nav-sidebar ul.nav-side1 li.correction a {
+    /* color: White; */
+    color: #5175ae;
+}
+
+#nav-sidebar ul.nav-side1 li.current {
+    /*background: url(../img/design/bg-nav-li.gif) top left repeat-x;*/
+}
+
+#nav-sidebar ul.nav-side1 li.current a {
+    color: #f7edd2;
+}
+
+#nav-sidebar ul.nav-side1 li.complete {
+    /*background: #5175ae url(../img/design/bg-nav-a-off.gif) 4px 8px no-repeat;*/
+}
+
+#nav-sidebar ul.nav-side1 li.complete a {
+    color: #d4e3f0;
+}
+
+#nav-sidebar ul.nav-side1 li.current a:hover,
+#nav-sidebar ul.nav-side1 li.complete a:hover,
+#nav-sidebar ul.nav-side1 li.correction a:hover {
+    color: White;
+    text-decoration: none;
+}
+
+#nav-sidebar ul.nav-side1 li.off {
+    /*background: #5175ae url(../img/design/bg-nav-a-off.gif) 4px 8px no-repeat;*/
+}
+
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 {
+    text-align: left;
+    padding: 0;
+    height: auto;
+    float: none;
+    list-style-type: none;
+    background-color: white;
+    margin-left: 0px;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li {
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 5px 0px 5px 0px;
+    vertical-align: middle;
+    height: auto;
+    float: none;
+    border-style: none;
+    width: 115px;
+    background-color: white;
+}
+
+* + html #nav-sidebar ul.nav-side1 li.current ul.nav-side2 li,
+* + html #nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li {
+    width: 100%;
+}
+
+* + html #nav-sidebar ul.nav-side1 li.current ul.nav-side2 li,
+* + html #nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li {
+    float: left;
+}
+
+* + html #nav-sidebar ul.nav-side1 li.current ul.nav-side2 li a,
+* + html #nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li a {
+    width: 98px;
+    height: auto;
+    color: Gray;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li a,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li a {
+    color: Gray;
+    padding: 3px 10px 3px 18px;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li a:hover,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li a:hover {
+    color: Gray;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.on,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.on {
+    /*background: url(../../_res/img/bullet-blue-wrap.png) 10px 7px no-repeat;*/
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.on a,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.on a {
+    color: Gray;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.correction a,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.correction a {
+    /* color: #6495ed; */
+    color: #cc0033;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.current,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.current {
+    /*background: white url(../../_res/img/bullet-blue-wrap.png) 10px 7px no-repeat;*/
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.current a,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.current a {
+    color: #1c2960;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.Level2complete,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.Level2complete {
+    background-color: white;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.Level2complete a,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.Level2complete a {
+    color: #1c2960;
+}
+
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.Level2complete a:hover,
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.current a:hover,
+#nav-sidebar ul.nav-side1 li.current ul.nav-side2 li.correction a:hover,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.Level2complete a:hover,
+#nav-sidebar ul.nav-side1 li.complete ul.nav-side2 li.current a:hover {
+    color: #5175ae;
+    text-decoration: none;
+}
+
+div.sidebar-help {
+    padding: 0 17px 0 10px;
+    width: 137px;
+    font-weight: normal;
+    color: #888888;
+    height: auto;
+    margin-left: 0;
+    /*background: url(../img/design/bg-nav-ul.png) top right no-repeat;*/
+    padding-bottom: 225px;
+}
+
+div.sidebar-help p {
+    line-height: 1.3;
+}
+
+/*Code to fix the left margin for the navigation in versions of IE prior to IE7*/
+* html div.sidebar-help {
+    margin-left: 35px;
+}
+
+/*Code to fix the left margin for the navigation in IE7*/
+* + html div.sidebar-help {
+    margin-left: 35px;
+}
+
+/*Code to fix the left margin for the navigation in Opera*/
+@media all and(min-width: 0px) {
+    div.sidebar-help {
+        margin-left: -3px;
+    }
+}
+
+#content_no_nav {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 11px;
+}
+
+/* h5 and h6 Styles added for headings on the Instructions and Getting Started Pages*/
+h5 {
+    margin: 0 0 7px -12px;
+    padding: 7px 0 7px 12px;
+    font: bold 12px Times, serif;
+    color: #383838;
+    border-top: 0;
+    border-bottom: 1px dotted #5F5D91;
+}
+
+h5 span {
+    color: #42416E;
+}
+
+div.help h5 {
+    line-height: 14px;
+}
+
+h6 {
+    margin: 0;
+    font: normal 12px Times, serif;
+    color: #5F5D91;
+    padding: 0 0 5px 0;
+}
+
+h6 span {
+    color: #5F5D91;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: #1c2960;
+}
+
+input {
+    text-transform: uppercase;
+}
+
+input.emailaddress {
+    text-transform: none;
+}
+
+select, textarea {
+    text-transform: uppercase;
+}
+
+/** html select /*commented out by Ken Snyder to correct date styles after apply more of the original NavArts styles*/
+/*{
+    margin-top: 0px;
+    margin-bottom: 1px; /* //*~ Gerry-changed to 6 so that dropdownlist elements align with adjacent textbox elements ~*\\ needs extra spacing underneath SELECT so that the floats work as intended 			                     * a SELECT isn't as tall as an INPUT in MSIE */
+/*}
+* + html select
+{
+    margin-top: 0px;
+    margin-bottom: 1px;
+}*/
+div.field-groups div.q h4 {
+    padding: 0 4px;
+}
+
+div.field-groups h4, div.field-groups h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #444444;
+    font-weight: normal;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    border: 0;
+    clear: left; /* dont ever want it floated */
+}
+
+fieldset p {
+    color: #888888;
+}
+
+/* DIV classes */
+
+/* div.field-group
+{
+    padding: 0 0 0 0; /* bottom padding will be handled by a field //*~ GERRY - Commented this section out in order to correct problem with elements in callout boxes being place at the (0,0) position (or upper-left most portion) of the callout box. ~*\\
+}
+*/
+
+div.radio {
+    padding-bottom: 10px !important; /* to make up for the div.field not having a padding */
+}
+
+fieldset.emailaddress input {
+    text-transform: none;
+}
+
+/* subit buttons */
+/* button. was replaced with input. by Ken Snyder to make the styles work with the ASP.Net button objects*/
+fieldset.submits {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -5px; /* to accomidate for the dropshadow image */
+}
+
+fieldset.submits div {
+    /*background: url(../img/bg-submits.png) 0 0 no-repeat;*/
+    height: 27px;
+}
+
+fieldset.submits input {
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+}
+
+fieldset.submits input.back, fieldset.submits input.back-off {
+    width: 205px;
+    /*background: url(../img/back-on.png) 0 0 no-repeat;*/
+    padding: 3px 0 3px 20px;
+    display: block;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.back span, fieldset.submits input.back-off span {
+    padding: 3px 0 3px 20px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.back-off {
+    /*background: url(../img/back-off.png) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.submits input.save, fieldset.submits input.save-off {
+    text-align: left;
+    width: 99px;
+    /*background: url(../img/save-on.png) 0 0 no-repeat;*/
+    margin: 0 2px;
+    padding: 3px 0 3px 40px;
+    display: block;
+}
+
+fieldset.submits input.save span, fieldset.submits input.save-off span {
+    padding: 3px 0 3px 40px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.save-off {
+    /*background: url(../img/save-off.gif) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.submits input.middle, fieldset.submits input.middle-off {
+    text-align: center;
+    width: 99px;
+    /*background: url(../img/middle-on.png) 0 0 no-repeat;*/
+    margin: 0 2px;
+    padding: 3px 0 3px 0px;
+    display: block;
+}
+
+fieldset.submits input.middle span, fieldset.submits input.middle-off span {
+    padding: 3px 0 3px 0px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.middle-off {
+    /*background: url(../img/middle-off.png) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.submits input.next, fieldset.submits input.next-off {
+    text-align: right;
+    width: 205px;
+    /*background: url(../img/next-on.png) 0 0 no-repeat;*/
+    padding: 3px 20px 3px 0;
+    display: block;
+}
+
+fieldset.submits input.next span, fieldset.submits input.next-off span {
+    padding: 3px 20px 3px 0;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.next-off {
+    /*background: url(../img/next-off.png) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.submits input.email {
+    color: Navy;
+    float: right;
+    width: 205px;
+    /*background: url(../img/email-app_blank.gif) 0 0 no-repeat;*/
+    padding: 3px 65px 3px 20px;
+    display: block;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.email span {
+    padding: 3px 0 3px 20px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.printapp {
+    color: Navy;
+    float: right;
+    width: 205px;
+    /*background: url(../img/print-app_blank.gif) 0 0 no-repeat;*/
+    padding: 3px 65px 3px 20px;
+    display: block;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.printapp span {
+    padding: 3px 0 3px 20px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.printconfirm {
+    color: Navy;
+    float: right;
+    width: 205px;
+    /*background: url(../img/print-confirmation_blank.gif) 0 0 no-repeat;*/
+    padding: 3px 65px 3px 20px;
+    display: block;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.printconfirm span {
+    padding: 3px 0 3px 20px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.blankbluebutton {
+    color: Navy;
+    /*background: url(../img/blankbluebutton.gif) 0 0 no-repeat;*/
+    padding: 3px 3px 3px 3px;
+    width: 205px;
+    text-align: center;
+    display: block;
+}
+
+input.blankbluebutton {
+    color: Navy;
+    /*background: url(../img/blankbluebutton.gif) 0 0 no-repeat;*/
+    padding: 3px 3px 3px 3px;
+    width: 205px;
+    height: 25px;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    text-transform: none;
+    border-color: Silver;
+    font-weight: bold;
+    font-size: 11px;
+    float: inherit;
+    cursor: pointer;
+}
+
+input.blankbluebutton2 {
+    color: Navy;
+    background: #fff url(../bg_button.gif) bottom repeat-x;
+    border: solid 1px #b0c4dc;
+    padding: 3px 3px;
+    width: 105px;
+    height: 25px;
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+div.blankbluebutton2 {
+    color: Navy;
+    background: #fff url(../bg_button.gif) bottom repeat-x;
+    border: solid 1px #b0c4dc;
+    padding-top: 5px;
+    width: 125px;
+    height: 20px;
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+div.blankbluebutton2 a, a:hover {
+    text-decoration: none;
+}
+
+
+div.field-full input.blankbluebutton {
+    color: Navy;
+    /*background: url(../img/blankbluebutton.gif) 0 0 no-repeat;*/
+    background-position: center;
+    padding: 3px 3px 3px 3px;
+    width: 205px;
+    height: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: solid 0px white;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.blankbluebutton span {
+    padding: 3px 3px 3px 3px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.submits input.blankbluebuttonwide {
+    color: Navy;
+    /*background: url(../img/blankbluebuttonwide.gif) 0 0 repeat-y repeat-x;*/
+    padding: 3px 3px 3px 3px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+input.blankbluebuttonwide {
+    color: Navy;
+    /*background: url(../img/blankbluebuttonwide.gif) 0 0 repeat-y repeat-x;*/
+    padding: 3px 3px 3px 3px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    text-transform: none;
+    border-color: Silver;
+    font-weight: bold;
+    font-size: 11px;
+    float: inherit;
+    cursor: pointer;
+}
+
+div.field-full input.blankbluebuttonwide {
+    color: Navy;
+    /*background: url(../img/blankbluebuttonwide.gif) 0 0 repeat-y repeat-x;*/
+    background-position: center;
+    padding: 3px 3px 3px 3px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: solid 0px white;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* SPAN is not ideal (extra code) but for this to display consistantly
+				 * with Safari+Firefox+MSIE+Opera it is used */
+fieldset.submits input.blankbluebuttonwide span {
+    padding: 3px 3px 3px 3px;
+    height: 14px;
+    display: block;
+}
+
+fieldset.photosubmits {
+    padding: 0;
+    margin-bottom: -5px; /* to accomidate for the dropshadow image */
+}
+
+fieldset.photosubmits div.uploadphotobtn {
+    /*background: url(../img/bg-photosubmits.png) 0 0 no-repeat;*/
+    height: 60px;
+    text-align: center;
+}
+
+fieldset.photosubmits input.uploadphoto, fieldset.photosubmits input.uploadphoto-off {
+    text-align: right;
+    width: 260px;
+    /*background: url(../img/upload-photo.gif) 0 0 no-repeat;*/
+    padding: 3px 20px 3px 0;
+    display: block;
+    height: 60px;
+}
+
+fieldset.photosubmits input.uploadphoto span, fieldset.photosubmits input.uploadphoto-off span {
+    padding: 3px 20px 3px 0;
+    height: 64px;
+    display: block;
+}
+
+fieldset.photosubmits input.uploadphoto-off {
+    /*background: url(../img/upload-photo.gif) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.photosubmits div.uploadanotherphotobtn {
+    /*background: url(../img/bg-photosubmits.png) 0 0 no-repeat;*/
+    height: 60px;
+    text-align: center;
+}
+
+fieldset.photosubmits input.uploadanotherphoto, fieldset.photosubmits input.uploadanotherphoto-off {
+    text-align: right;
+    width: 305px;
+    /*background: url(../img/buttons/upload-photo.another.png) 0 0 no-repeat;*/
+    padding: 3px 20px 3px 0;
+    display: block;
+    height: 60px;
+}
+
+fieldset.photosubmits input.uploadanotherphoto span, fieldset.photosubmits input.uploadanotherphoto-off span {
+    padding: 3px 20px 3px 0;
+    height: 64px;
+    display: block;
+}
+
+fieldset.photosubmits input.uploadanotherphoto-off {
+    /*background: url(../img/buttons/upload-photo.another.png) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.photosubmits div.choosediffphotobtn {
+    /*!* background: url(../img/bg-photosubmits.png) 0 0 no-repeat; *!*/
+    height: 50px;
+    padding-left: 35%; /* text-align: center; */
+}
+
+fieldset.photosubmits input.choosediffphoto, fieldset.photosubmits input.choosediffphoto-off {
+    text-align: right;
+    width: 262px;
+    /*background: url(../img/buttons/choose-a-diff-photo.png) 0 0 no-repeat;*/
+    padding: 3px 40px 3px 0;
+    display: block;
+    height: 50px;
+}
+
+fieldset.photosubmits input.choosediffphoto span, fieldset.photosubmits input.choosediffphoto-off span {
+    padding: 3px 40px 3px 0;
+    height: 54px;
+    display: block;
+}
+
+fieldset.photosubmits input.choosediffphoto-off {
+    /*background: url(../img/buttons/choose-a-diff-photo.png) 0 0 no-repeat;*/
+    cursor: default;
+}
+
+fieldset.confirmphoto div.confirmphoto-label {
+    float: left;
+    width: 100px;
+}
+
+
+/* table CSS */
+table.review {
+    border-collapse: collapse;
+}
+
+table.review th {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 3px 5px;
+}
+
+table.review td {
+    vertical-align: top;
+    padding: 3px 5px;
+}
+
+table.review tr.header th, tr.header td {
+    border-top: 1px solid #888888;
+    color: #273368;
+    text-align: right;
+}
+
+table.review tr.header th {
+    padding: 3px 0;
+    text-align: left;
+}
+
+table.review tr.header th {
+    font-weight: bold;
+}
+
+table.review tr.header a {
+    text-decoration: none;
+}
+
+table.review tr.header a:hover {
+    text-decoration: underline;
+}
+
+table.review tr.even {
+    background-color: #dddddd;
+}
+
+table.review tr.photo {
+    background-color: transparent !important;
+}
+
+table.review tr.photo th {
+    width: 200px;
+}
+
+table.reviewdetail {
+    width: 400px;
+}
+
+table.reviewdetail tr.even {
+    background-color: #dddddd;
+}
+
+table.reviewdetail td {
+    vertical-align: top;
+    padding: 3px 5px;
+    width: 150px;
+}
+
+table.reviewdetail th {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 3px 5px;
+    width: 150px;
+}
+
+table.Printreview {
+    border-collapse: collapse;
+}
+
+fieldset img {
+    border: 1px solid #e5ddca;
+}
+
+table.Printreview th {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 3px 5px;
+}
+
+table.Printreview td {
+    vertical-align: top;
+    padding: 3px 5px;
+}
+
+table.Printreview tr.header th, tr.header td {
+    border-top: 1px solid #888888;
+    color: #273368;
+    text-align: right;
+}
+
+table.Printreview tr.header th {
+    padding: 3px 0;
+    text-align: left;
+}
+
+table.Printreview tr.header th {
+    font-weight: bold;
+}
+
+table.Printreview tr.header a {
+    text-decoration: none;
+}
+
+table.Printreview tr.header a:hover {
+    text-decoration: underline;
+}
+
+table.Printreview tr.even {
+    background-color: #dddddd;
+}
+
+table.Printreview tr.photo {
+    background-color: transparent !important;
+}
+
+table.Printreview tr.photo th {
+    width: 200px;
+}
+
+table.Printreviewdetail {
+    width: 500px;
+}
+
+table.Printreviewdetail tr.even {
+    background-color: #dddddd;
+}
+
+table.Printreviewdetail td {
+    vertical-align: top;
+    padding: 3px 5px;
+    width: 250px;
+}
+
+table.Printreviewdetail th {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 3px 5px;
+    width: 250px;
+}
+
+div.InfoDiv Span.Infonote {
+    padding: 8px 8px 8px 8px;
+}
+
+#siteinfo {
+    width: 690px; /*Ken Snyder added this width setting to force the footer to use the full screen and not slide up under the content frame*/
+}
+
+#content {
+    padding-left: 184px; /*Change by Ken Snyder from 190 to 184 (original was 170) to keep help from dropping below section*/
+}
+
+fieldset {
+    width: 524px; /*Changed by Ken from 516 to 524 to support Firefox*/
+}
+
+/*Ken added the following fieldset styles to account for differences in padding between IE and Firefox */
+* html fieldset {
+    width: 516px;
+}
+
+* + html fieldset {
+    width: 516px;
+}
+
+/*Support date style within a double callout - added by Ken and Gerald*/
+div.callout div.callout div.date {
+    width: 278px;
+}
+
+div.callout div.callout div.date input {
+    width: 3em !important; /* 4 digit year, important because I can not think of a reason this would be overruled */
+}
+
+div.callout div.callout div.date select {
+    width: auto !important; /* months and years */
+}
+
+* html div.callout div.callout div.date {
+    width: 278px;
+}
+
+* html div.callout div.callout div.date input {
+    width: 3em !important; /* 4 digit year, important because I can not think of a reason this would be overruled */
+}
+
+* html div.callout div.callout div.date select {
+    width: auto !important; /* months and years */
+}
+
+* + html div.callout div.callout div.date {
+    width: 278px;
+}
+
+* + html div.callout div.callout div.date input {
+    width: 3em !important; /* 4 digit year, important because I can not think of a reason this would be overruled */
+}
+
+* + html div.callout div.callout div.date select {
+    width: auto !important; /* months and years */
+}
+
+
+/*The following styles were added by Ken Snyder to correct css formating of the buttons which are rendered as inputs*/
+#content-main input.imagebutton {
+    border: 0 !important;
+    background-color: transparent !important;
+    width: auto !important;
+}
+
+/*#content-main input.submitbutton
+{
+	width: auto !important;
+}*/
+
+span.RadioCheck input {
+    border: 0 !important;
+    background-color: transparent !important;
+    width: auto !important;
+}
+
+/* within a callout within a callout within an answer */
+div.a div.callout div.callout span.RadioCheck input {
+    width: auto !important; /* important because we want to override div.full if it is used (it shouldn't be) */
+}
+
+* html div.a div.callout div.callout span.RadioCheck input {
+    width: auto !important;
+}
+
+* + html div.a div.callout div.callout span.RadioCheck input {
+    width: auto !important;
+}
+
+span.GrayLabel {
+    border: inset 1px gray;
+    font-size: 12px;
+    font-family: Arial;
+    background-color: #AACCFF; /* ActiveBorder   ;  */
+    text-align: center;
+    width: 45px !important;
+    height: auto !important;
+}
+
+#content {
+    padding-right: 20px; /* to prevent some pages from dropping below the left nav*/
+}
+
+/* boxes around review section */
+div.ReviewSection {
+    border: 1px solid #dddddd;
+    padding: 5px;
+    margin: 0 0 20px 0;
+    float: left;
+    width: 100%;
+}
+
+div.ReviewSection p {
+    margin: 0;
+    line-height: 14px;
+}
+
+
+/* ------------ FOR MODALPOPUP START -------*/
+
+.modalpopup {
+    font-family: arial, helvetica, clean, sans-serif;
+    font-size: small;
+    padding: 2px 3px;
+    display: block;
+    position: absolute;
+}
+
+.modalpopup2 {
+    background-color: #ffffdd;
+    width: 400px;
+    vertical-align: top;
+}
+
+div.modal-content {
+    width: 600px;
+    background-color: #eaf1f7;
+    border: 1px solid #dddddd;
+    padding: 10px 10px 25px 10px;
+    margin: 0 0 24px 0;
+}
+
+div.modal-content div.place-holder {
+    padding: 10px 10px 0 10px;
+    background-color: #fff;
+    border: solid 1px #cfdde9;
+}
+
+.container {
+    width: 400px;
+    border: none 1px #808080;
+    border-width: 1px 0px;
+}
+
+.header {
+    /*background: url(_res/img/sprite.png) repeat-x 0px -200px; */
+    background-color: #0054E3;
+    color: #F0F0F0;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 1px 1px 1px;
+    padding: 4px 8px 4px 8px;
+    text-align: left;
+}
+
+.header .msg {
+    font-weight: bold;
+}
+
+.body {
+    background-color: #D4D0C8;
+    border-bottom-color: #808080;
+    border-left-color: #0054E3;
+    border-right-color: #0054E3;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 3px;
+    padding: 10px 8px 10px 8px;
+    text-align: left;
+}
+
+.body .msg {
+    /*background: url(_res/img/sprite.png) no-repeat 0px -1150px;*/
+    float: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.footer {
+    /*background-color: #f2f2f2;
+    border-color: #666;
+    border-style:outset solid;
+    border-width: 1px 1px;
+    text-align:center;
+    padding:4px 8px 4px 8px;*/
+
+    background-color: #D4D0C8;
+    border-color: #0054E3;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 3px;
+    padding: 1px 8px 1px 8px;
+    text-align: center;
+}
+
+.close {
+    right: 7px;
+    /*background: url(_res/img/sprite.png) no-repeat 0px -300px;*/
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    height: 15px;
+}
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity:60) !important;
+    opacity: 0.5;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 1000 !important;
+}
+
+/* ------------ FOR MODALPOPUP END -------*/
+
+
+/* within a callout within an answer within a callout within an answer (COPIED AND MODIFIED FROM THE BASE)*/
+div.a div.callout div.a div.callout div.field {
+    width: auto !important;
+    float: none;
+}
+
+div.a div.callout div.a div.callout div.YearTextBox input, div.a div.callout div.a div.callout select, div.a div.callout div.a div.callout textarea {
+    width: 240px !important; /* important because we want to override div.full if it is used (it shouldn't be) */
+}
+
+* html div.a div.callout div.a div.callout div.YearTextBox input, * html div.a div.callout div.a div.callout textarea {
+    width: 235px !important;
+}
+
+* + html div.a div.callout div.a div.callout div.YearTextBox input, * + html div.a div.callout div.a div.callout textarea {
+    width: 235px !important;
+}
+
+div.error-message {
+    border: 1px solid #c90b01;
+    background-color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+#tools-language {
+    position: absolute;
+    top: -55px;
+    right: 24px;
+    width: 300px;
+    font-family: Times, serif;
+    font-size: 8pt;
+    color: #fff;
+    text-align: right;
+}
+
+#tools-language p {
+    margin: 0;
+    padding: 0;
+}
+
+#tools-language a {
+    color: #fff;
+}
+
+#tools-language option {
+    text-transform: none;
+}
+
+#branding input {
+    top: 5px;
+    left: 10px;
+    z-index: 100;
+    position: absolute;
+    background-color: Transparent;
+}
+
+.upload-section {
+    border: solid 1px #283c5d;
+    /*  background-color:#fff;  */
+    background-color: #eaf1f7;
+    padding: 2px 2px;
+}
+
+.upload-section .title-bar .title {
+    margin: 5px 5px 5px 5px;
+    background-color: #283c5d;
+    text-align: left;
+    color: White;
+}
+
+.upload-section .title-bar .action-button {
+    margin-bottom: 5px;
+    background-color: #283c5d;
+    border-bottom: solid 1px #4e719a;
+    text-align: right;
+}
+
+.watermark {
+    font-size: .85em;
+    color: #959595;
+}
+
+div.toggle {
+    background-color: #283c5d;
+    clear: both;
+    /* border-bottom:dashed 1px #c2c2c2;  */
+    padding: 5px 20px;
+    cursor: hand;
+}
+
+div.toggle a {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: none;
+}
+
+div.toggle span {
+    font-size: .90em;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-title {
+    background: none;
+    margin: 0;
+    font: normal 24px Times, serif;
+    color: #1c2960;
+    padding: 10px 0 0 0;
+    margin-right: 10px;
+}
+
+a.action {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #3095fa;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: none;
+}
+
+#report-title {
+    font: normal 14px Times, serif;
+    font-weight: bold;
+    color: #1c2960;
+}
+
+div.sbu {
+    padding: 7px 7px;
+    margin-bottom: 15px;
+    background-color: #faf8f1;
+    border-left: solid 1px #f2e7d5;
+    border-bottom: solid 1px #f2e7d5;
+}
+
+div.sbu span.title {
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #444444;
+}
+
+div.sbu span.description {
+    font-size: 10px;
+    color: #881502;
+}
+
+div.header-row {
+    clear: both;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+div.header-row table {
+    width: 97%;
+    background-color: #e1e1e1;
+}
+
+div.header-row table td {
+    font: normal 1em Verdana, Times, serif;
+    font-weight: bold;
+    color: #363636;
+    height: 30px;
+}
+
+div.nested-row {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-bottom: solid 1px #f0f3f8;
+}
+
+div.nested-row table td {
+    padding: 0 0;
+    text-align: left;
+}
+
+div.item-row {
+    margin: 1px 0px;
+    text-align: left;
+    border: solid 1px #f0f3f8;
+    /*background: url(../img/bg_report_header.gif) bottom repeat-x;*/
+}
+
+div.item-row .html-input {
+    font-size: .95em;
+}
+
+div.item-row-no-docs {
+    margin: 1px 0px;
+    text-align: left;
+    border: solid 1px #f0f3f8;
+    /*background: url(../img/bg_no_docs.gif) no-repeat;*/
+    background-position: 675px 0;
+}
+
+.columnLabel {
+    font: normal 12px Times, serif;
+    font-weight: bold;
+    color: #324078;
+}
+
+div.item-row table {
+    width: 97%;
+}
+
+div.item-row-reviewed table {
+    width: 97%;
+}
+
+div.item-row table td {
+    padding: 2px;
+    text-align: left;
+    font-size: 10px;
+}
+
+div.item-row table tr.head td {
+    font-weight: bold;
+}
+
+/* div.item-row-no-docs table td
+{
+    padding: 2px;
+    text-align: left;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+}
+
+div.item-row-reviewed table td
+{
+    padding: 2px;
+    text-align: left;
+} */
+
+div.item-row table td.number {
+    width: 10px;
+    padding: 0px 2px;
+    background-color: White;
+    border-left: solid 1px #f0f3f8;
+    border-bottom: solid 1px #f0f3f8;
+}
+
+/* div.item-row-reviewed table td.number
+{
+    width: 20px;
+    padding: 0px 2px;
+    text-align: right;
+} */
+
+div.item-row table td.action a {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: underline;
+}
+
+div.item-row a.action-button {
+    width: 200px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #3095fa;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: none;
+}
+
+#upload-area input {
+    text-transform: lowercase;
+    width: 525px;
+    size: 75;
+}
+
+.action-btn input {
+    margin-top: 20px;
+    color: Navy;
+    font-weight: bold;
+    /*background: url(../img/blankbluebutton.gif) 0 0 no-repeat;*/
+}
+
+.wordwrap {
+    word-break: break-all;
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: pre-wrap; /* fx>3, Opera>8, Safari>3 */
+    white-space: o-pre-wrap; /* Opera 7 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: pre-line;
+}
+
+.hiddencol {
+    display: none;
+}
+
+/* Tree View Styles*/
+.selected {
+    color: #8d1200;
+    text-decoration: underline;
+}
+
+.pending {
+    font-family: font-size: 10px;
+    color: #acacac;
+}
+
+div.document-tree img {
+    border: none;
+}
+
+div.document-tree table td {
+    border: none;
+}
+
+div.document-form table td {
+    border: none;
+}
+
+div.document-tree {
+    float: left;
+    height: 375px;
+    width: 245px;
+    /* overflow:auto;  */
+}
+
+div.document-form {
+    width: 375px;
+    min-height: 365px;
+    float: left;
+    padding: 5px 5px;
+}
+
+/* End Tree View Styles*/
+div.document-summary {
+    float: left;
+    width: 196px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: solid 1px #bbc1d2;
+    /*background: #fff url(../img/bg_report_header.gif) bottom repeat-x;*/
+}
+
+div.document-count span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+table.explore {
+    position: relative;
+    width: 100%;
+    padding: 0 0;
+    margin-bottom: 20px;
+    border: solid 1px #d7d7d7;
+}
+
+table.explore td {
+    vertical-align: top;
+    border: solid 1px #d7d7d7;
+}
+
+table.explore #footer, #tree-footer {
+    position: absolute;
+    bottom: 10px;
+    display: table;
+    padding-left: 20px;
+}
+
+table.explore td#summary {
+    text-align: right;
+    padding: 2px 5px;
+    background-color: #ebebeb;
+}
+
+table.explore td.tree-view {
+    width: 260px;
+    padding: 2px 3px;
+}
+
+table.explore td.tree-view, td.doc-details {
+
+    /*background: #fff url(../img/bg_report_header.gif) bottom repeat-x;*/
+}
+
+table.explore td.tree-view a {
+    text-decoration: none;
+}
+
+div.cell-footer {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+div.instructions p {
+    line-height: normal;
+    color: Black;
+}
+
+
+/*  a[disabled]
+{
+    color:Gray !important; text-decoration:none !important;}
+*/
+
+/* ------------ Final Submit buttons start -------*/
+/*red button*/
+fieldset.submitgroup input.submit {
+    /*background: url(../img/submit-on.png) 0 0 no-repeat;*/
+    padding: 3px 0px 3px 0;
+    width: 205px;
+    border: none;
+}
+
+input.submit {
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+}
+
+/* ------------ Final Submit buttons end -------*/
+div.faq {
+    float: right;
+    padding: 2px 0;
+    padding-left: 18px;
+    /*background: url(../img/icon_faq.gif) 0 0 no-repeat;*/
+}
+
+table.document-legend td {
+    padding: 2px 0;
+    padding-left: 18px;
+}
+
+table.document-legend #accepted {
+    /*background: url(../img/lock_ok.ico) 0 0 no-repeat;*/
+}
+
+table.document-legend #empty {
+    /*background: url(../img/icon_doc_empty.png) 0 0 no-repeat;*/
+}
+
+table.document-legend #rejected {
+    /*background: url(../img/icon_doc_error.gif) 0 0 no-repeat;*/
+}
+
+table.document-legend #required {
+    /*background: url(../img/document_plain.gif) 0 0 no-repeat;*/
+}
+
+table.document-legend #saved {
+    /*background: url(../img/icon_doc_save.png) 0 0 no-repeat;*/
+}
+
+table.document-legend #submitted {
+    /*background: url(../img/document_lock.png) 0 0 no-repeat;*/
+}
+
+table.category {
+    width: 100%;
+    text-align: left;
+    background-color: #f9fafc;
+    border-collapse: collapse;
+    padding: 0 0;
+    margin-bottom: 15px;
+    border-top: solid 1px #e9ecf5;
+    border-bottom: solid 1px #dbe0ed;
+}
+
+table.category .menu {
+    float: left;
+    min-height: 22px;
+    margin-top: 3px;
+    padding-top: 2px;
+}
+
+table.category .update-status {
+    /*background: url(../img/icon_flag.gif) 0 0 no-repeat;*/
+}
+
+table.category td.first {
+    padding-left: 20px;
+    border-left: solid 1px #cfd5e8;
+}
+
+table.category th.last {
+    border-right: solid 1px #cfd5e8;
+}
+
+table.category th.first {
+    border-left: solid 1px #cfd5e8;
+}
+
+table.category th.action {
+    min-height: 24px !important;
+    padding: 6px 10px;
+    border: solid 1px #c0c9df;
+    border-top: none;
+    font-weight: normal;
+    color: #1c2960;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    /*background: #fff url(../img/bg_report_header.gif) bottom repeat-x;*/
+}
+
+table.category th.head {
+    padding: 2px 5px;
+    font-weight: normal;
+    color: #8291a6;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid 1px #dbe0ed;
+    background-color: #edf2fb;
+}
+
+table.category th.head a.action {
+    color: #790000;
+    text-decoration: underline;
+    font-size: 10px;
+    text-transform: none;
+}
+
+table.category td.last {
+    border-right: solid 1px #cfd5e8;
+}
+
+table.category td {
+    padding: 7px 5px;
+    border-left: solid 1px #cfd5e8;
+    color: #464646;
+    text-transform: capitalize;
+    /*background: #fff url(../img/bg_report_header2.gif) bottom repeat-x;*/
+}
+
+table.category td.value {
+    width: 55px;
+    font-size: 10px;
+    color: #1e5970;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.category td.status {
+    width: 85px;
+    font-size: 10px;
+    color: #1e5970;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.category td.status a {
+    color: #1e5970;
+    text-decoration: underline;
+}
+
+table.category td.document a {
+    color: #1e5970;
+    text-decoration: underline;
+}
+
+table.category td.status a:hover {
+    text-decoration: underline;
+}
+
+table.category td.status a.action {
+    color: #790000;
+    text-decoration: underline;
+    font-size: 10px;
+}
+
+table.category td.status a.disable {
+    color: #8291a6;
+    text-decoration: underline;
+    font-size: 10px;
+}
+
+table.category td.disabled {
+    color: #959595;
+}
+
+table.category td.empty {
+    border-top: solid 1px #cfd5e8;
+    /*background: #fff url(../img/bg-empty.gif) bottom repeat-x;*/
+}
+
+table.category td.foot {
+    width: 100%;
+    color: #fff;
+    background-color: #3f81bd;
+    font-size: 10px;
+    border-top: solid 1px #cfd5e8;
+}
+
+table.category .remove {
+    width: 16px;
+    height: 16px;
+    /*background: url(../img/icon_x.gif) 0 0 no-repeat;*/
+}
+
+.item-list {
+    padding-bottom: 2px;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.item-list a {
+    color: #448ccb;
+    text-decoration: none;
+}
+
+.item-list a:hover {
+    text-decoration: underline;
+}
+
+.item-list .item-status {
+    float: right;
+    margin-right: 10px;
+    color: #1e5970;
+}
+
+.item-list .item-status a {
+    color: #1e5970;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.item-list .item-status a.action {
+    font-size: 10px;
+    color: #790000;
+    text-decoration: underline;
+}
+
+.item-list .item-status span.disabled {
+    color: #959595;
+}
+
+div.panel-category {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    /*background: #fff url(../img/bg_shadow.jpg) bottom no-repeat;*/
+}
+
+div.panel-category table {
+    width: 255px;
+    margin-bottom: 0;
+    border-bottom: solid 1px #e1e1e1;
+}
+
+table.category .add-sponsor {
+    min-width: 125px;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    /*background: url(../img/bg_add_joint_sponsor_sm.png) 0 0;*/
+    background-repeat: no-repeat;
+}
+
+table.category .add-housemember {
+    min-width: 150px;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    /*background: url(../img/bg_add_applicant.png) 0 0 no-repeat;*/
+}
+
+table.category .add-applicant {
+    min-width: 95px;
+    padding-top: 5px;
+    text-align: left;
+    /*background: url(../img/bg_add_applicant_sm.png) 0 0;*/
+    background-repeat: no-repeat;
+    /*background-size:200px 30px;*/
+}
+
+table.category .remove-user {
+    min-width: 130px;
+    margin-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+    /*background: url(../img/icon_remove_app.png) 0 0 no-repeat;*/
+}
+
+.add-sponsor a, .add-applicant a, .remove-user a {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+table.category a.COMPLETED, a.Submitted {
+    text-decoration: none;
+}
+
+table.category a.COMPLETED:hover, a.Submitted:hover {
+    text-decoration: underline;
+}
+
+table.category .HM /*AOS Household Member*/
+{
+    margin-left: 10px;
+}
+
+.watermarked {
+    font-size: 10px;
+    color: #e1e1e1;
+}
+
+.title {
+    font-size: 10px;
+    font-weight: bold;
+    color: #363636;
+}
+
+div.message {
+    min-height: 30px !important;
+    min-width: 35px !important;
+    /*background: url(../img/bg_message.png) 7px 7px no-repeat;*/
+}
+
+div.message div.none {
+    background-color: #898989;
+    border: solid 1px #636363;
+}
+
+div.message div {
+    width: 15px;
+    height: 15px;
+    padding: 1px 1px;
+    background-color: #790000;
+    font-weight: bold;
+    color: #fff;
+    border: solid 1px #540000;
+}
+
+div.message a {
+    font-size: 11px;
+    color: #fff;
+}
+
+div.applicant-menu {
+    float: left;
+    text-align: left;
+    width: 225px;
+    border: solid 1px #abc3d7;
+    /*background: #fff url(../img/bg_report_header2.gif) bottom repeat-x;*/
+}
+
+div.applicant-menu div {
+    padding: 3px 10px;
+    border-bottom: dotted 1px #dee8f1;
+}
+
+div.applicant-menu div:hover {
+    /*background: #fff url(../img/icon_x.gif) 182px 2px no-repeat;*/
+}
+
+div.applicant-menu a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+div.applicant-menu a:hover {
+    font-weight: bold;
+    color: #790000;
+}
+
+table.category a.disabled:hover {
+    text-decoration: none;
+}
+
+a.disabled {
+    color: #959595;
+}
+
+div.help span:first-child {
+    color: #891300;
+}
+
+span.error-message {
+    color: Red;
+}
+
+.instructions {
+    color: #959595;
+}
+
+div.processing {
+    width: 100%;
+    height: 100%;
+    top: 0px !important;
+    left: 0px !important;
+    position: fixed;
+    background: gray;
+    display: block;
+    opacity: 0.3;
+    text-align: center;
+}
+
+div.imgLoading {
+    height: 45%;
+    width: 100%;
+    top: 45% !important;
+    left: 25% !important;
+    position: absolute;
+    /*background: url(../img/loading.png) no-repeat;*/
+    z-index: 1;
+}
+
+#fade {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 110%;
+    background-color: #ababab;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+#processmodal {
+    display: none;
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    top: 45% !important;
+    left: 35% !important;
+    /*background: url(../img/loading.png) no-repeat;*/
+    z-index: 1002;
+    text-align: center;
+    overflow: auto;
+}

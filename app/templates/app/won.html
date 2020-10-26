@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Entrant Status Check Web Site
+    </title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link href="{% static '/jss/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/css/bootstrap-theme.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/edv.css' %}" rel="stylesheet"/>
+    <script type="text/javascript" src="{% static '/jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/jss/js/bootstrap.min.js' %}"></script>
+
+    <!--[if lt IE 9]>
+    <script src="/jss/html5shiv.min.js"></script>
+    <script src="/jss/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="escbodytag" role="document">
+<form name='form1' method="post" action="./CheckStatus.aspx" onsubmit="WebForm_OnSubmit()"
+      id="escform">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""/>
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""/>
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+               value="/wEPDwUKLTk3MTYzNDIwNw9kFgJmD2QWBAIBD2QWAgIJD2QWAgIBDxYCHgdWaXNpYmxlaGQCAw9kFgICAQ9kFgpmDxYCHwBoZAIBDxYCHwBnZAIDD2QWCAIDDxYCHwBnFgJmD2QWAmYPZBYGAgEPD2QWAh4LcGxhY2Vob2xkZXIFEDIwMjF4eHh4eHh4eHh4eHhkAgMPDxYEHhRWYWxpZGF0aW9uRXhwcmVzc2lvbgU0XigyezF9MHsxfTJ7MX0wezF9fDJ7MX0wezF9MnsxfTF7MX0pW2EtekEtWjAtOV17MTJ9JB4MRXJyb3JNZXNzYWdlBYABSW52YWxpZCBDb25maXJtYXRpb24gTnVtYmVyOiBQbGVhc2UgZW50ZXIgdGhlIGNvcnJlY3QgY29uZmlybWF0aW9uIG51bWJlciB0aGF0IGlzIDE2IGNoYXJhY3RlcnMgbG9uZyAoZXhhbXBsZTogMjAyMTFPMERaV1kzRE9WOSlkZAIQDw8WBB4MTWluaW11bVZhbHVlBQQxODgwHgxNYXhpbXVtVmFsdWUFBDIwMDdkZAIFDxYCHwBoZAIHDxYCHwBoZAIJDxYCHwBoZAIED2QWAgIBDxYCHwBnZAIFD2QWAgIBDxYCHwBoZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUoY3RsMDAkbWFpbkNQSCR1Y0VudHJhbnRJbmZvJGNiTm9MYXN0TmFtZfMjy7OKslp/ohtB+NJNPyDUmpgp"/>
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4ED1B8C6"/>
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+               value="/wEdAAgTic8fd6xdXchU8s2ozesWF0NZqfdzTMcvQ//mQ19PB7dPcEKsXkWEjCT3Pf7f1+M7AFzxpQcQeAiZxmIwuoTxl5vRK33InJ/lo+ROAyU0MDG5zAD+5/LOj2bdOmBd4IetOqMY7GZn3NevaDo/g7BbrmhP+aJJWUSgzjsAPZB4e9CG25uMSg1s7aUWfStmXJN2A3UO"/>
+    </div>
+    <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="bg-primary">
+        <div class="container" id="header">
+            <div class="row hidden-xs">
+                <div class="col-sm-8">
+                    <div class="inline-block valign-middle">
+                        <a href="http://www.state.gov" target="_blank" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="inline-block valign-middle text-center">
+                        <h4 class="m2222">U.S. Department of State</h4>
+                        <h5 class="m2222">Bureau of Consular Affairs</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="inline-block valign-middle pull-right mt5">
+                        <h4 class="text-right m2222">Electronic Diversity Visa</h4>
+                        <h5 class="text-right m2222">Entrant Status Check: 5.5</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <div class="inline-block">
+                        <a href="http://www.state.gov" aria-label="ESC Home">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="pull-right inline-block valign-middle text-right mt2">
+                        <h5 class="m2222">U.S. Department of State</h5>
+                        <h6 class="m2222">Bureau of Consular Affairs</h6>
+                        <h6 class="m2222">eDV ESC: 5.5</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="link">
+        <div class="row">
+            <div class="col-sm-12 text-right mt5">
+        <span class="">
+
+
+          <a href="./Help.aspx" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help
+          </a>
+
+
+          <a href="./Default.aspx" class="btn btn-default btn-xs" role="button">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+          </a>
+
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="main" role="main">
+
+<div class="row" id="scrn">
+    <div class="col-xs-6 col-sm-8">
+        <img src="{% static 'jss/DoSSeal.png' %}" alt="DoS Letterhead Seal">
+    </div>
+    <div class="col-xs-6 col-sm-4 text-right">
+        <span class="fnt2">
+            <b>United States Department of State</b><br>
+            <i>Kentucky Consular Center</i><br>
+            <i>3505 North Highway 25W</i><br>
+            <i>Williamsburg, KY 40769</i><br>
+            <i>U.S.A</i><br>
+        </span>
+    </div>
+    <div class="col-sm-12">
+        <div id="printdiv">
+            <br>
+            <br>
+            <span id="lblDateYear">June 06, 2020</span>
+            <br>
+            <br>
+            <span id="litAddress1">DILDORA ABDUKADIROVA<br>25 A.QODIRIY ST GULISTON<br>SIRDARYA, SIRDARYA 120100<br>UZBEKISTAN</span>
+            <br>
+            <br>
+            Dear
+            <span id="lblFullName2">DILDORA ABDUKADIROVA</span>,
+            <br>
+            <br>
+            <span id="lblP3Top"><p>You have been randomly selected for further processing in the Diversity Immigrant Visa Program for the fiscal year 2021 (October 1, 2020 to September 30, 2021). Selection does not guarantee that you will receive a visa because the number of applicants selected is greater than the number of visas available. Therefore, it is very important that you carefully follow instructions to increase your chances of possible visa issuance. The instructions are located on the Department of State website at <a href="http://dvselectee.state.gov" target="_blank"><span>http://dvselectee.state.gov</span></a>. All DV applicants must use the online DS-260 Immigrant Visa and Alien Registration Application.</p><p> Your case will not be scheduled for an interview appointment until a visa number is available, you have submitted a complete and valid DS-260 application for each family member, and you have provided copies of all required documentation to the Kentucky Consular Center (KCC). You will receive document submission instructions by e-mail after KCC processes and accepts the DS-260 application forms for you and any accompanying family members. If you are scheduled for an interview, you will receive an e-mail notification message. These important e-mails will be sent to the email address you provided on your initial application. Notify KCC at <a href="mailto:KCCDV@state.gov"><span>KCCDV@state.gov</span></a> if your e-mail address changes to ensure you receive all notifications regarding your Diversity Visa case. </p><p> If you need to contact the Kentucky Consular Center (KCC) about your case, you may write to <a href="mailto:KCCDV@state.gov"><span>KCCDV@state.gov</span></a>. When writing to KCC, you must always include your name and case number as they appear below. You must also include your complete date of birth as stated on your original entry.  You may call the Kentucky Consular Center at (+1)606-526-7500 between 7:30am and 4:00pm EST </p></span>
+            <table>
+                <tbody><tr>
+                    <td>Case Number:</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span id="lblLRN1">2021EU00015834</span></td>
+                </tr>
+                <tr>
+                    <td>Principal Applicant Name:</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span id="lblLFMName">ABDUKADIROVA, DILDORA</span></td>
+                </tr>
+                <tr>
+                    <td>Preference Category:</td>
+                    <td>&nbsp;</td>
+                    <td>DV DIVERSITY</td>
+                </tr>
+                <tr>
+                    <td>Foreign State Chargeability:</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span id="lblFSCName">UZBEKISTAN</span></td>
+                </tr>
+                <tr>
+                    <td>Post:</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span id="lblPost">TASHKENT</span></td>
+                </tr>
+            </tbody></table>
+            <br>
+                <span id="lblP3Bottom"></span>
+        </div>
+    </div>
+</div>
+
+
+
+  </div>
+    <footer>
+        <div class="container" id="footer">
+            <hr class="hideme">
+            <p class="small hideme">
+                <b>PAPERWORK REDUCTION ACT:</b>
+                Public reporting burden for this collection of information is estimated to average 30 minutes per
+                response, including time required for searching existing data sources, gathering the necessary
+                documentation, providing the information and/or documents required, and reviewing the final collection.
+                You do not have to supply this information unless this collection displays a currently valid OMB control
+                number. If you have comments on the accuracy of this burden estimate and/or recommendations for reducing
+                it, please send them to: PRA_BurdenComments@state.gov.
+            </p>
+            <p class="small hideme">
+                <b>CONFIDENTIALITY STATEMENT:</b>
+                INA Section 222(f) provides that visa issuance and refusal records shall be confidential and shall be
+                used only for the formulation, amendment, administration, or enforcement of the immigration,
+                nationality, and other laws of the United States. Certified copies of visa records may be made available
+                to a court which certifies that the information contained in such records is needed in a case pending
+                before the court.
+            </p>
+            <p class="small hideme">
+                <b>PRIVACY POLICY:</b> For information on the Department of State’s privacy policy, regarding the
+                nature, purpose, use, and sharing of any Personally Identifiable Information (PII) collected via this
+                website please <a href="https://www.state.gov/privacy-policy" target="_blank">click here</a>.<br>
+            </p>
+            <hr>
+            <div class="row hidden-xs">
+                <div class="col-sm-12 text-center mb5">
+                    <a href="http://www.usa.gov" class="" target="_blank">
+                        <img alt="USA Gov" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                    <a href="http://travel.state.gov" target="_blank" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="./Default.aspx" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="http://www.usa.gov">
+                        <img alt="USA Gov" class="mb10" src="{% static 'img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a href="http://travel.state.gov" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="./Default.aspx" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> ESC Home
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="">
+                        <small>
+                            This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External
+                            links to other Internet sites should not be construed as an endorsement of the views
+                            contained therein.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jss/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'jss/js/common.js' %}"></script>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,272 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Electronic Diversity Visa Program
+    </title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link href="{% static '/jss/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/css/bootstrap-theme.min.css' %}" rel="stylesheet"/>
+    <link href="{% static '/jss/edv.css' %}" rel="stylesheet"/>
+    <script type="text/javascript" src="{% static '/jss/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/jss/js/bootstrap.min.js' %}"></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="/jss/html5shiv.min.js"></script>
+    <script src="/jss/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/jss/Universal-Federated-Analytics.js?agency=DOS&subagency=CA"
+            id="_fed_an_ua_tag"></script>
+</head>
+<body id="edvbodytag" role="document">
+<form method="post" action="./" id="form">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+               value="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"/>
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"/>
+        <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value=""/>
+    </div>
+    <a href="#maincontent" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="bg-primary">
+        <div class="container" id="header">
+            <div class="row hidden-xs">
+                <div class="col-sm-8">
+                    <div class="inline-block valign-middle">
+                        <a href="http://www.state.gov" aria-label="Department of State Website">
+                            <img src="{% static 'img/Seal_of_the_United_States_Department_of_State40x40.png' %}"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="inline-block valign-middle text-center">
+                        <h4 class="m2222">U.S. Department of State</h4>
+                        <h5 class="m2222">Bureau of Consular Affairs</h5>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="inline-block valign-middle pull-right mt5">
+                        <h4 class="text-right m2222">Electronic Diversity Visa</h4>
+                        <h5 class="text-right m2222">Applicant Entry System: 12.7</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <div class="inline-block">
+                        <a href="http://www.state.gov" aria-label="Department of State Website">
+                            <img src="img/Seal_of_the_United_States_Department_of_State40x40.png"
+                                 alt="Department of State Seal" class="valign-middle m5555"/>
+                        </a>
+                    </div>
+                    <div class="pull-right inline-block valign-middle text-right mt2">
+                        <h5 class="m2222">U.S. Department of State</h5>
+                        <h6 class="m2222">Bureau of Consular Affairs</h6>
+                        <h6 class="m2222">eDV AES: 12.7</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="link">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-right mt5">
+        <span class="">
+
+
+          <a href="/Help.aspx" class="btn btn-default btn-xs" role="button" target="_blank">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help
+          </a>
+
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="maincontent" role="main">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-center">
+                <h3>Electronic Diversity Visa Program</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 mt0 text-center">
+                <div class="alert alert-info" role="alert">
+                    <h3 class="m0000">Welcome</h3>
+                </div>
+                <p><span id="ContentPlaceHolderWelcomeMaster_lblWelcomeMessage_1">Our State Department Web site for the 2022 Diversity Visa Program (DV-2022) is now open. The entry submission period for DV-2022 is from 12:00PM EDT (GMT -4) on October 7, 2020 to 12:00PM EST (GMT -5) on November 10, 2020. The entry form will only be available for submission during this period and this period only. Entries will NOT be accepted through the U.S. Postal Service.</span>
+                </p>
+                <p><span id="ContentPlaceHolderWelcomeMaster_lblWelcomeMessage_2"><b>After reading the instructions, click the "Begin Entry" button below to enter the DV Program.</b></span>
+                </p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="m5050">Entry Instructions</h4>
+                    </div>
+                    <div class="panel-body p5555">
+                        <div class="col-xs-12 col-sm-12">
+                            <span id="ContentPlaceHolderWelcomeMaster_lblEntryInstructionsMessage_1">Please read the DV-2022 Entry Instructions carefully. Entrants may be disqualified for not completing the entry form correctly or by submitting more than one entry. Use the link below to view the instructions.</span>
+                            <br/>
+                            <p class="text-center m9090">
+                                <a id="ContentPlaceHolderWelcomeMaster_hlDVInstr" class="btn btn-primary"
+                                   href="https://travel.state.gov/content/visas/en/immigrate/diversity-visa/instructions.html"
+                                   target="_blank">DV-2022 Instructions</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="m5050">Photo Instructions</h4>
+                    </div>
+                    <div class="panel-body p5555">
+                        <div class="col-xs-12 col-sm-12">
+                            <span id="ContentPlaceHolderWelcomeMaster_lblPhotoValidatorMessage_1">Before beginning the entry process, verify that your picture and pictures for any dependents fully comply with DV entry photo requirements included in the DV-2022 instructions.  Your case will be disqualified if you submit a non-compliant photo.  For examples of acceptable photos, click the button below.</span>
+                            <br/>
+                            <p class="text-center m9090">
+                                <a id="ContentPlaceHolderWelcomeMaster_hlDvPhotoLink" class="btn btn-primary"
+                                   href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/photo-examples.html"
+                                   target="_blank">Photo Examples</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="m5050">Entry Form</h4>
+                    </div>
+                    <div class="panel-body p5555">
+                        <div class="col-xs-12 col-sm-12">
+                            <span id="ContentPlaceHolderWelcomeMaster_lblEntryFormMessage_1">The entry form is prepared in two parts, one for the primary Entrant and one for derivatives (if any). Each part must be completed correctly and completely before going to the next part. After all parts are completed, the entry will be submitted to the DV-2022 Processing Center. Click the link below to begin the entry process.</span>
+                            <br/>
+                            <p class="text-center m9090">
+                                {#                                <a class="btn btn-success" href="application.aspx">Begin Entry</a>#}
+                                <a class="btn btn-success" href="{% url 'application' %}">Begin Entry</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="m5050">DV Entrant Status Check</h4>
+                    </div>
+                    <div class="panel-body p5555">
+                        <div class="col-xs-12 col-sm-6 text-center">
+                            <h4 class="m9090"><span id="ContentPlaceHolderWelcomeMaster_lblESCDVLotteryYearMessage_1">2022 Entrant Status Check</span>
+                            </h4>
+                            <div class="col-xs-12 col-sm-12">
+                                <span id="ContentPlaceHolderWelcomeMaster_lblESCDVLotteryYearMessage_2">DV-2022 Entrants may enter their confirmation information through the link below starting at noon (EDT) on May 8, 2021. The DV-2022 registration period opens on October 7, 2020, and closes on November 10, 2020. DV-2022 Entrants should keep their confirmation number until at least September 30, 2022.</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 text-center">
+                            <h4 class="m9090"><span id="ContentPlaceHolderWelcomeMaster_lblESCDVLotteryYearMessage_3">2021 Entrant Status Check</span>
+                            </h4>
+                            <div class="col-xs-12 col-sm-12">
+                                <span id="ContentPlaceHolderWelcomeMaster_lblESCDVLotteryYearMessage_4">DV-2021 Entrants have until September 30, 2021 to check the status of their entry through this website. The DV-2021 registration period was from October 2, 2019, until November 5, 2019.</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <div class="col-xs-12 col-sm-12">
+                                <br/>
+                                <b><span id="ContentPlaceHolderWelcomeMaster_lblEntrantStatusCheckLinkMessage_1">Click the link below to check DV-2022 and DV-2021 Entrant Status.</span></b>
+                                <br/>
+                                <br/>
+                                <p class="text-center">
+                                    {#                                    <a class="btn btn-primary" href="https://dvprogram.state.gov/ESC/">Check Status</a>#}
+                                    <a class="btn btn-primary" href="{% url 'default' %}">Check Status</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container" id="footer">
+            <hr class="hideme">
+            <p class="small hideme">
+                <b>PAPERWORK REDUCTION ACT:</b>
+                <span id="lblPaperworkReductionActMessage">Public reporting burden for this collection of information is estimated to average 30 minutes per response, including time required for searching existing data sources, gathering the necessary documentation, providing the information and/or documents required, and reviewing the final collection. You do not have to supply this information unless this collection displays a currently valid OMB control number. If you have comments on the accuracy of this burden estimate and/or recommendations for reducing it, please send them to: PRA_BurdenComments@state.gov.</span>
+            </p>
+            <p class="small hideme">
+                <b>CONFIDENTIALITY STATEMENT:</b>
+                <span id="lblConfidentialityStatementMessage">The information asked for on this form is requested pursuant to Section 222 of the Immigration and Nationality Act. INA Section 222(f) provides that visa issuance and refusal records shall be considered confidential and shall be used only for the formulation, amendment, administration, or enforcement of the immigration, nationality, and other laws of the United States.  Certified copies of visa records may be made available to a court which certifies that the information contained in such records is needed in a case pending before the court.</span>
+            </p>
+            <p class="small hideme">
+                <b>PRIVACY POLICY:</b>
+                For information on the Department of State’s privacy policy, regarding the nature, purpose, use, and
+                sharing of any Personally Identifiable Information (PII) collected via this website please <a
+                    href="https://www.state.gov/privacy-policy" target="_blank">click here</a>.
+            </p>
+            <hr>
+            <div class="row hidden-xs">
+                <div class="col-sm-12 text-center mb5">
+                    <a href="http://www.usa.gov/" class="">
+                        <img alt="USA Gov" src="{% static '/img/80px-US-GSA-USAGov-Logo.png' %}"/>
+                    </a>
+                    <a href="http://travel.state.gov" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="#maincontent" class="btn btn-default btn-xs" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Top of page
+                    </a>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="http://www.usa.gov">
+                        <img alt="USA Gov" class="mb10" src="/img/80px-US-GSA-USAGov-Logo.png"/>
+                    </a>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a href="http://travel.state.gov" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> travel.state.gov
+                    </a>
+                    <a href="#maincontent" class="btn btn-default btn-xs mb5" role="button">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Top of page
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="">
+                        <small>
+              <span class="footer_text">
+                This site is managed by the Bureau of Consular Affairs, 
+                U.S. Department of State. External links to other Internet sites should
+                not be construed as an endorsement of the views contained therein.
+              </span>
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</form>
+</body>
+</html>

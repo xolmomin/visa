@@ -1,0 +1,370 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="ctl00_Head1"><title>
+    Immigrant Visa - Sign In
+</title>
+    <script>window['adrum-start-time'] = new Date().getTime();</script>
+    <script type="text/javascript" src="https://ceac.state.gov/adrum.js"></script>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <link href="{% static 'jss/css/screen.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'jss/css/print.css' %}" rel="stylesheet" type="text/css" media="print"/>
+    <link id="ctl00_stylesheet" rel="stylesheet" type="text/css"/>
+    <script type='text/javascript' src="_res/js/ceac.js"></script>
+    <style type="text/css">
+        .HiddenText label {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function SessionAlert() {
+            // Call serverside function
+            var msg = 'There has been no activity for 15 minutes. As a security measure, your session will time out in 5 minutes. Click OK to continue.';
+
+            var now = new Date();
+            alert("[" + now + "] " + msg);
+            document.forms[0].submit();
+            setTimeout("SessionAlert()", 15 * 60 * 1000);
+        }
+    </script>
+    <script type='text/javascript' src="{% static 'jss/js/jquery-1.9.1.min.js' %}"></script>
+</head>
+<body onload='setTimeout("SessionAlert()", 15 * 60 * 1000);history.go(+1);'>
+
+<form method="post" action="{% url 'login' %}" onsubmit="javascript:return WebForm_OnSubmit();"
+      onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_SiteContentPlaceHolder_btnContinue')"
+      id="aspnetForm" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+    <div class="aspNetHidden">
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['aspnetForm'];
+
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+
+        //]]>
+    </script>
+    <script type="text/javascript">
+        function WebForm_OnSubmit() {
+            if (document.getElementsByName('ContentPlaceHolder').value.length == 0) {
+                {#Sign In Failed#}
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+    </script>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DF1246EB"/>
+        <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value=""/>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$SiteContentPlaceHolder$updConfirm', ''], [], [], 120, 'ctl00');
+        //]]>
+    </script>
+
+    <div id="container">
+        <div id="branding">
+            <div id="branding-logo">
+                <img src="{% static 'img/../../static/jss/banner.png' %}" id="ctl00_Img1"
+                     alt="U.S. Department of State Electronic Application Center"/>
+            </div>
+        </div>
+        <hr/>
+        <div id="nav" style="height: 0px;">
+            <div id="nav-global">
+                <ul>
+
+                    <li id="ctl00_divContactUs">
+                        <a onclick="window.open(&#39;https://travel.state.gov/content/travel/en/contact-us/us-visas.html&#39;);return false;"
+                           id="ctl00_lbtnContactUs"
+                           href="javascript:__doPostBack(&#39;ctl00$lbtnContactUs&#39;,&#39;&#39;)">Contact Us</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <hr/>
+        <div id="content_no_nav">
+            <div id="content-main">
+                <h1>
+                    <span id="ctl00_lblPageTitle" style="display:inline-block;width:500px;">Immigrant Visa</span></h1>
+
+                <div id="ctl00_SiteContentPlaceHolder_Panel1"
+                     onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_SiteContentPlaceHolder_btnContinue&#39;)">
+
+                    <h2>Sign In</h2>
+                    <div class="fieldset-group">
+                        <fieldset style="width: 600px">
+
+                            <br/>
+                            <div>
+                                Welcome to the Consular Electronic Application Center – Immigrant/Diversity Visa portal.
+                                To access your case, please enter your case number below.
+                            </div>
+                            <br/>
+                            <div class="alertMessage">
+                                Please do not use the browser’s back or refresh buttons while using the CEAC site.
+                                Instead, use the navigation links on the page. You will lose information if you use the
+                                browser’s back or refresh button, and will need to log back into the application.
+                            </div>
+                            <br/>
+                            <div id="ctl00_SiteContentPlaceHolder_ValidationSummarySecond"
+                                 style="color:Red;display:none;">
+                            </div>
+                            {% if check_form.errors %}
+                                <span id="ctl00_SiteContentPlaceHolder_lblError"
+                                      class="error-message">Sign In Failed</span>
+                                {% for field in check_form %}
+                                    {% for error in field.errors %}
+                                        <ul style="list-style-type: disc; color:red;">
+                                            <li>
+                                                <span id="ctl00_SiteContentPlaceHolder_lblError" class="error-message">
+                                                    {{ error|escape }}
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+
+                            <br/>
+                            <br/>
+                            <div class="field-groups">
+                                <div class="field full">
+                                    <label for="case_number"
+                                           id="ctl00_SiteContentPlaceHolder_lblCase"
+                                           title="If you are an IV applicant, your case number begins with a three letter code.  If you are a DV applicant your case number begins with the four digit year of your program.">Case
+                                        Number</label>
+                                    <span id="ctl00_SiteContentPlaceHolder_cvCaseNo" style="display:none;"></span>
+
+                                    <input name="case_number" type="text" maxlength="20"
+                                           id="ctl00_SiteContentPlaceHolder_txbCase"/>
+                                </div>
+                                <div>
+
+                                </div>
+
+
+                                <span id="ctl00_SiteContentPlaceHolder_cvValCaptchaLogin" style="display:none;"></span>
+                            </div>
+                            <div class="help">
+                                <h4>
+
+                                    <span>Important: </span>
+                                    <span>Before You Begin</span>
+                                </h4>
+                                <div id="ctl00_SiteContentPlaceHolder_updConfirm">
+
+                                    <p>
+                                        <a id="ctl00_SiteContentPlaceHolder_lnkBrowser"
+                                           href="javascript:__doPostBack(&#39;ctl00$SiteContentPlaceHolder$lnkBrowser&#39;,&#39;&#39;)">Browser
+                                            Requirements</a>
+                                    </p>
+                                    <br/>
+                                    <div id="ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlMessage"
+                                         class="modal-content" style="display:none;">
+
+                                        <div class="place-holder">
+                                            <h3 id="ctl00_SiteContentPlaceHolder_ucModalBrowser_h2Title">
+                                                <span id="ctl00_SiteContentPlaceHolder_ucModalBrowser_lblTitle">Browser Requirements</span>
+                                            </h3>
+                                            <div>
+                                                <span id="ctl00_SiteContentPlaceHolder_ucModalBrowser_lblContent"></span>
+                                            </div>
+                                            <div style="text-align:left;">
+
+                                                1. Your browser must support 128-bit encryption.<br/>
+                                                2. JavaScript must be enabled.<br/>
+                                                3. Transport Layer Security (TLS) must be enabled.<br/>
+                                                4. This website will work with a variety of Internet browsers, but it is
+                                                best supported by<br/>
+                                                &nbsp;&nbsp;&nbsp; Internet Explorer 8.0 or higher.<br/>
+                                                <div style="margin-top: 30px; margin-bottom: 10px; text-align: center;">
+                                                    <a id="ctl00_SiteContentPlaceHolder_ucModalBrowser_ctl00_lnkClose"
+                                                       href="javascript:__doPostBack(&#39;ctl00$SiteContentPlaceHolder$ucModalBrowser$ctl00$lnkClose&#39;,&#39;&#39;)">Close</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlScroll">
+
+                                    </div>
+                                    <a href="UserControls/#"
+                                       id="ctl00_SiteContentPlaceHolder_ucModalBrowser_anchorModalActivate"></a>
+
+
+                                </div>
+
+                                <p>
+                                    **Please be patient. Download times may vary depending on your internet connection
+                                    speed.**
+                                </p>
+                            </div>
+                            <div class="field-groups">
+                                <div class="field full" style="text-align: center;">
+                                    <input type="submit" name="ContentPlaceHolder"
+                                           value="Continue" id="ctl00_SiteContentPlaceHolder_btnContinue"
+                                           class="blankbluebutton2" style="width:180px;"/>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div id="ctl00_pnlSiteInfo">
+
+            <div id="siteinfo">
+                <div id="siteinfo-legal">
+                    <p>
+                        <span id="ctl00_siteinfoLabel">This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External links to other Internet sites should not be construed as an endorsement of the views contained therein. </span><br/>
+                        <a id="ctl00_hplCopyright" href="https://ceac.state.gov/ceac/Common/Copyright.aspx"
+                           target="_ceac">Copyright Information</a>
+                        &nbsp;
+                        <a id="ctl00_hplDisclaimers" href="https://ceac.state.gov/ceac/Common/Disclaimer.aspx"
+                           target="_ceac">Disclaimers</a>
+                        &nbsp;
+                        <span style="float: right;">
+                            <span id="ctl00_lblIP" tabindex="6050" style="background-color:LightGrey;font-size:0.6em;">(223)</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="fade"/>
+        <div id="processmodal"/>
+
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var Page_ValidationSummaries = new Array(document.getElementById("ctl00_SiteContentPlaceHolder_ValidationSummarySecond"));
+        var Page_Validators = new Array(document.getElementById("ctl00_SiteContentPlaceHolder_cvCaseNo"), document.getElementById("ctl00_SiteContentPlaceHolder_cvValTextLogin"), document.getElementById("ctl00_SiteContentPlaceHolder_cvValDoBLogin"), document.getElementById("ctl00_SiteContentPlaceHolder_cvValFourthField"), document.getElementById("ctl00_SiteContentPlaceHolder_cvValCaptchaLogin"));
+        //]]>
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var ctl00_SiteContentPlaceHolder_ValidationSummarySecond = document.all ? document.all["ctl00_SiteContentPlaceHolder_ValidationSummarySecond"] : document.getElementById("ctl00_SiteContentPlaceHolder_ValidationSummarySecond");
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.headertext = "Sign In Failed";
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.validationGroup = "Login";
+        var ctl00_SiteContentPlaceHolder_cvCaseNo = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvCaseNo"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvCaseNo");
+        ctl00_SiteContentPlaceHolder_cvCaseNo.display = "None";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValTextLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValTextLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValTextLogin");
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValDoBLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValDoBLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValDoBLogin");
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValFourthField = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValFourthField"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValFourthField");
+        ctl00_SiteContentPlaceHolder_cvValFourthField.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValCaptchaLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValCaptchaLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValCaptchaLogin");
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        //]]>
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        (function () {
+            var fn = function () {
+                $get("ctl00_ScriptManager1_HiddenField").value = '';
+                Sys.Application.remove_init(fn);
+            };
+            Sys.Application.add_init(fn);
+        })();
+        history.forward(1);
+        (function (id) {
+            var e = document.getElementById(id);
+            if (e) {
+                e.dispose = function () {
+                    Array.remove(Page_ValidationSummaries, document.getElementById(id));
+                }
+                e = null;
+            }
+        })('ctl00_SiteContentPlaceHolder_ValidationSummarySecond');
+
+        var Page_ValidationActive = false;
+        if (typeof (ValidatorOnLoad) == "function") {
+            ValidatorOnLoad();
+        }
+
+        function ValidatorOnSubmit() {
+            if (Page_ValidationActive) {
+                return ValidatorCommonOnSubmit();
+            } else {
+                return true;
+            }
+        }
+
+        document.getElementById('ctl00_SiteContentPlaceHolder_cvCaseNo').dispose = function () {
+            Array.remove(Page_Validators, document.getElementById('ctl00_SiteContentPlaceHolder_cvCaseNo'));
+        }
+
+        document.getElementById('ctl00_SiteContentPlaceHolder_cvValTextLogin').dispose = function () {
+            Array.remove(Page_Validators, document.getElementById('ctl00_SiteContentPlaceHolder_cvValTextLogin'));
+        }
+
+        document.getElementById('ctl00_SiteContentPlaceHolder_cvValDoBLogin').dispose = function () {
+            Array.remove(Page_Validators, document.getElementById('ctl00_SiteContentPlaceHolder_cvValDoBLogin'));
+        }
+
+        document.getElementById('ctl00_SiteContentPlaceHolder_cvValFourthField').dispose = function () {
+            Array.remove(Page_Validators, document.getElementById('ctl00_SiteContentPlaceHolder_cvValFourthField'));
+        }
+
+        document.getElementById('ctl00_SiteContentPlaceHolder_cvValCaptchaLogin').dispose = function () {
+            Array.remove(Page_Validators, document.getElementById('ctl00_SiteContentPlaceHolder_cvValCaptchaLogin'));
+        }
+        Sys.Application.add_init(function () {
+            $create(Sys.Extended.UI.ModalPopupBehavior, {
+                "BackgroundCssClass": "modalBackground",
+                "CancelControlID": "ctl00_SiteContentPlaceHolder_ucModalBrowser_anchorModalActivate",
+                "DropShadow": true,
+                "OkControlID": "ctl00_SiteContentPlaceHolder_ucModalBrowser_anchorModalActivate",
+                "PopupControlID": "ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlMessage",
+                "PopupDragHandleControlID": "ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlScroll",
+                "Y": 20,
+                "dynamicServicePath": "/IV/Login.aspx",
+                "id": "ctl00_SiteContentPlaceHolder_ucModalBrowser_modalConfirm"
+            }, null, null, $get("ctl00_SiteContentPlaceHolder_ucModalBrowser_anchorModalActivate"));
+        });
+        //]]>
+    </script>
+</form>
+</body>
+</html>

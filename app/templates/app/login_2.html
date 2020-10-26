@@ -1,0 +1,402 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="ctl00_Head1"><title>
+    Immigrant Visa - Sign In
+</title>
+    <script>window['adrum-start-time'] = new Date().getTime();</script>
+    <script type="text/javascript" src="https://ceac.state.gov/adrum.js"></script>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <link href="{% static 'jss/css/screen.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'jss/css/print.css' %}" rel="stylesheet" type="text/css" media="print"/>
+    <link id="ctl00_stylesheet" rel="stylesheet" type="text/css"/>
+    <script type='text/javascript' src="_res/js/ceac.js"></script>
+    <style type="text/css">
+        .HiddenText label {
+            display: none;
+        }
+    </style>
+    <script type='text/javascript' src="{% static 'jss/js/jquery-1.9.1.min.js' %}"></script>
+</head>
+<body onload='setTimeout("SessionAlert()", 15 * 60 * 1000);history.go(+1);'>
+
+<form method="post" action="{% url 'summary' %}" onsubmit="javascript:return WebForm_OnSubmit();"
+      onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_SiteContentPlaceHolder_btnContinue')"
+      id="aspnetForm" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+    <div id="container">
+        <div id="branding">
+            <div id="branding-logo">
+                <img src="{% static 'img/../../static/jss/banner.png' %}" id="ctl00_Img1"
+                     alt="U.S. Department of State Electronic Application Center"/>
+            </div>
+        </div>
+        <hr/>
+        <div id="nav" style="height: 0px;">
+            <div id="nav-global">
+                <ul>
+                    <li id="ctl00_divContactUs">
+                        <a onclick="window.open(&#39;https://travel.state.gov/content/travel/en/contact-us/us-visas.html&#39;);return false;"
+                           id="ctl00_lbtnContactUs"
+                           href="javascript:__doPostBack(&#39;ctl00$lbtnContactUs&#39;,&#39;&#39;)">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr/>
+        <div id="content_no_nav">
+            <div id="content-main">
+                <h1>
+                    <span id="ctl00_lblPageTitle" style="display:inline-block;width:500px;">Immigrant Visa</span></h1>
+
+                <div id="ctl00_SiteContentPlaceHolder_Panel1"
+                     onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_SiteContentPlaceHolder_btnContinue&#39;)">
+
+                    <h2>Sign In</h2>
+                    <div class="fieldset-group">
+                        <fieldset style="width: 600px">
+
+                            <br/>
+                            <div>
+                                Welcome to the Consular Electronic Application Center – Immigrant/Diversity Visa portal.
+                                To access your case, please enter your case number below.
+                            </div>
+                            <br/>
+                            <div class="alertMessage">
+                                Please do not use the browser’s back or refresh buttons while using the CEAC site.
+                                Instead, use the navigation links on the page. You will lose information if you use the
+                                browser’s back or refresh button, and will need to log back into the application.
+                            </div>
+                            <br/>
+                            <div id="ctl00_SiteContentPlaceHolder_ValidationSummarySecond"
+                                 style="color:Red;display:none;">
+
+                            </div>
+                            {% if check_form.errors %}
+                                <span id="ctl00_SiteContentPlaceHolder_lblError" class="error-message">
+                                Sign In Failed
+                            </span>
+                                {% for field in check_form %}
+                                    {% for error in field.errors %}
+                                        <ul style="list-style-type: disc; color:red;">
+                                            <li>
+                                                <span id="ctl00_SiteContentPlaceHolder_lblError" class="error-message">
+                                                    {{ error|escape }}
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+                            <br/>
+                            <br/>
+
+                            <div class="field-groups">
+                                <div class="field full">
+                                    <label for="case_number"
+                                           id="ctl00_SiteContentPlaceHolder_lblCase"
+                                           title="If you are an IV applicant, your case number begins with a three letter code.  If you are a DV applicant your case number begins with the four digit year of your program.">
+                                        Case Number
+                                    </label>
+                                    <span id="ctl00_SiteContentPlaceHolder_cvCaseNo" style="display:none;"></span>
+                                    <input name="case_number" type="text"
+                                           value="{{ case_number }}" maxlength="20"
+                                           id="ctl00_SiteContentPlaceHolder_txbCase">
+                                </div>
+                                <div>
+                                    <div id="ctl00_SiteContentPlaceHolder_pnlLoginTextField" class="field full">
+
+                                        <label for="name"
+                                               id="ctl00_SiteContentPlaceHolder_lblInvoiceSurname">Enter the Principal
+                                            Applicant's Surname</label>
+                                        <input name="name" type="text"
+                                               id="ctl00_SiteContentPlaceHolder_txbInvoiceSurname">
+
+                                    </div>
+                                    <div id="ctl00_SiteContentPlaceHolder_pnlLoginDOB" class="field full">
+                                        <label for="birth"
+                                               id="ctl00_SiteContentPlaceHolder_lblDob">Enter the Principal Applicant's
+                                            Date of Birth</label>
+                                        <div id="ctl00_SiteContentPlaceHolder_ucDob_updDates">
+                                            <div class="date">
+                                                <select name="day"
+                                                        id="ctl00_SiteContentPlaceHolder_ucDob_ddlDate"
+                                                        listitemtype="Day">
+                                                    <option value=""></option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+
+                                                </select>
+                                                <select name="month"
+                                                        id="ctl00_SiteContentPlaceHolder_ucDob_ddlMonth"
+                                                        listitemtype="Month">
+                                                    <option value=""></option>
+                                                    <option value="01">JAN</option>
+                                                    <option value="02">FEB</option>
+                                                    <option value="03">MAR</option>
+                                                    <option value="04">APR</option>
+                                                    <option value="05">MAY</option>
+                                                    <option value="06">JUN</option>
+                                                    <option value="07">JUL</option>
+                                                    <option value="08">AUG</option>
+                                                    <option value="09">SEP</option>
+                                                    <option value="10">OCT</option>
+                                                    <option value="11">NOV</option>
+                                                    <option value="12">DEC</option>
+
+                                                </select>
+                                                <input name="year" type="text"
+                                                       maxlength="4" id="ctl00_SiteContentPlaceHolder_ucDob_txbYear">
+                                                <div class="hint"><span
+                                                        id="ctl00_SiteContentPlaceHolder_ucDob_lblFormat">(Format: DD-MMM-YYYY)</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div id="ctl00_SiteContentPlaceHolder_pnlLoginFourthField" class="field full">
+
+                                        <label for="confirm"
+                                               id="ctl00_SiteContentPlaceHolder_lblLoginFourthField">Electronic
+                                            Diversity Visa Confirmation Number</label>
+                                        <input name="confirm" type="text"
+                                               id="ctl00_SiteContentPlaceHolder_txbFourthLoginField">
+
+                                    </div>
+                                    <span id="ctl00_SiteContentPlaceHolder_cvValTextLogin" style="display:none;"></span>
+                                    <span id="ctl00_SiteContentPlaceHolder_cvValDoBLogin" style="display:none;"></span>
+                                    <span id="ctl00_SiteContentPlaceHolder_cvValFourthField"
+                                          style="display:none;"></span>
+                                </div>
+                                <div id="ctl00_SiteContentPlaceHolder_pnlRoles" class="field full">
+
+                                    <span id="ctl00_SiteContentPlaceHolder_lblRoles">I am the</span>
+                                    <span id="ctl00_SiteContentPlaceHolder_rfRole" style="display:none;"></span>
+                                    <select name="status"
+                                            id="ctl00_SiteContentPlaceHolder_ddlRoles">
+                                        <option selected="selected" value="">-- SELECT ONE --</option>
+                                        <option value="APPLICANT">APPLICANT</option>
+                                        <option value="ATTORNEY">ATTORNEY</option>
+                                        <option value="THIRD-PARTY AGENT">THIRD-PARTY AGENT</option>
+                                    </select>
+                                </div>
+                                <div id="ctl00_SiteContentPlaceHolder_pnlCaptcha" class="field full">
+                                    <div class="LBD_CaptchaDiv "
+                                         id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_CaptchaDiv"
+                                         style="width: 280px !important; height: 50px !important; ">
+                                        <div class="LBD_CaptchaImageDiv"
+                                             id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_CaptchaImageDiv"
+                                             style="width: 250px !important; height: 10px !important;"><img
+                                                id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_CaptchaImage"
+                                                alt="CAPTCHA"
+                                                src="{% static 'login_captcha.png' %}">
+                                        </div>
+                                        <div class="LBD_CaptchaIconsDiv"
+                                             id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_CaptchaIconsDiv"
+                                             style="width: 24px !important;margin-left: 170px;">
+                                            <a class="LBD_ReloadLink"
+                                               id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_ReloadLink"
+                                               href="#"
+                                               onclick="ReloadImage(); this.blur(); return false;"
+                                               title="Change the CAPTCHA code"
+                                               style="display: inline-block !important;"><img class="LBD_ReloadIcon"
+                                                                                              id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_ReloadIcon"
+                                                                                              src="https://ceac.state.gov/IV/BotDetectCaptcha.ashx?get=DisabledReloadIcon"
+                                                                                              alt="Change the CAPTCHA code">
+                                            </a>
+                                            <a class="LBD_SoundLink"
+                                               id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_SoundLink"
+                                               href="/IV/BotDetectCaptcha.ashx?get=sound&amp;c=c_login_ctl00_sitecontentplaceholder_samplecaptcha&amp;t=09b8750ecc44477e9ecf236e730c511b&amp;s=gEiV6q%2b9aeX0nkXo84FFKF2Bmm%2f2qCzb%2frt0ojipZ7PKAGzjw01TdwzCY7crsasXihpLWWJasXSaT%2f7p4JiApQ%3d%3d"
+                                               onclick="PlaySound(); this.blur(); return false;"
+                                               title="Speak the CAPTCHA code"><img class="LBD_SoundIcon"
+                                                                                   id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_SoundIcon"
+                                                                                   src="https://ceac.state.gov/IV/BotDetectCaptcha.ashx?get=DisabledSoundIcon"
+                                                                                   alt="Speak the CAPTCHA code">
+                                            </a><!--
+		   -->
+                                            <div class="LBD_Placeholder"
+                                                 id="c_login_ctl00_sitecontentplaceholder_samplecaptcha_AudioPlaceholder"></div><!--
+		 --></div>
+                                        <script src="/IV/BotDetectCaptcha.ashx?get=clientScriptInclude"
+                                                type="text/javascript"></script>
+                                        <script type="text/javascript">
+                                            //<![CDATA[
+                                            BotDetect.Init('c_login_ctl00_sitecontentplaceholder_samplecaptcha', '09b8750ecc44477e9ecf236e730c511b', 'ctl00_SiteContentPlaceHolder_txtCaptcha', true, true, true, true, 100, 90, 2000, false);
+                                            //]]>
+                                        </script>
+                                        <link type="text/css" rel="Stylesheet"
+                                              href="BotDetectCaptcha.ashx?get=layoutStyleSheet">
+                                        <input type="hidden"
+                                               name="LBD_VCID_c_login_ctl00_sitecontentplaceholder_samplecaptcha"
+                                               id="LBD_VCID_c_login_ctl00_sitecontentplaceholder_samplecaptcha"
+                                               value="09b8750ecc44477e9ecf236e730c511b">
+                                        <input type="hidden"
+                                               name="LBD_BackWorkaround_c_login_ctl00_sitecontentplaceholder_samplecaptcha"
+                                               id="LBD_BackWorkaround_c_login_ctl00_sitecontentplaceholder_samplecaptcha"
+                                               value="1">
+                                    </div>
+                                    <div style="padding-top: 2px;">
+                                        <br>
+                                        <label for="captcha">Enter the characters as shown:</label>
+                                        <br>
+                                        <input name="captcha" type="text"
+                                               id="ctl00_SiteContentPlaceHolder_txtCaptcha"
+                                               style="text-transform: uppercase;">
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                                <span id="ctl00_SiteContentPlaceHolder_cvValCaptchaLogin" style="display:none;"></span>
+                            </div>
+                            <div class="help">
+                                <h4>
+
+                                    <span>Important: </span>
+                                    <span>Before You Begin</span>
+                                </h4>
+                                <div id="ctl00_SiteContentPlaceHolder_updConfirm">
+
+                                    <p>
+                                        <a id="ctl00_SiteContentPlaceHolder_lnkBrowser"
+                                           href="javascript:__doPostBack(&#39;ctl00$SiteContentPlaceHolder$lnkBrowser&#39;,&#39;&#39;)">Browser
+                                            Requirements</a>
+                                    </p>
+                                    <br/>
+                                    <div id="ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlMessage"
+                                         class="modal-content" style="display:none;">
+
+                                        <div class="place-holder">
+                                            <h3 id="ctl00_SiteContentPlaceHolder_ucModalBrowser_h2Title">
+                                                <span id="ctl00_SiteContentPlaceHolder_ucModalBrowser_lblTitle">Browser Requirements</span>
+                                            </h3>
+                                            <div>
+                                                <span id="ctl00_SiteContentPlaceHolder_ucModalBrowser_lblContent"></span>
+                                            </div>
+                                            <div style="text-align:left;">
+                                                1. Your browser must support 128-bit encryption.<br/>
+                                                2. JavaScript must be enabled.<br/>
+                                                3. Transport Layer Security (TLS) must be enabled.<br/>
+                                                4. This website will work with a variety of Internet browsers, but it is
+                                                best supported by<br/>
+                                                &nbsp;&nbsp;&nbsp; Internet Explorer 8.0 or higher.<br/>
+                                                <div style="margin-top: 30px; margin-bottom: 10px; text-align: center;">
+                                                    <a id="ctl00_SiteContentPlaceHolder_ucModalBrowser_ctl00_lnkClose"
+                                                       href="javascript:__doPostBack(&#39;ctl00$SiteContentPlaceHolder$ucModalBrowser$ctl00$lnkClose&#39;,&#39;&#39;)">Close</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="ctl00_SiteContentPlaceHolder_ucModalBrowser_pnlScroll">
+                                    </div>
+                                    <a href="UserControls/#"
+                                       id="ctl00_SiteContentPlaceHolder_ucModalBrowser_anchorModalActivate"></a>
+                                </div>
+                                <p>
+                                    **Please be patient. Download times may vary depending on your internet connection
+                                    speed.**
+                                </p>
+                            </div>
+                            <div class="field-groups">
+                                <div class="field full" style="text-align: center;">
+                                    <input type="submit" name="ctl00$SiteContentPlaceHolder$btnContinue"
+                                           value="Continue" id="ctl00_SiteContentPlaceHolder_btnContinue"
+                                           class="blankbluebutton2" style="width:180px;"/>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_pnlSiteInfo">
+            <div id="siteinfo">
+                <div id="siteinfo-legal">
+                    <p>
+                        <span id="ctl00_siteinfoLabel">This site is managed by the Bureau of Consular Affairs, U.S. Department of State. External links to other Internet sites should not be construed as an endorsement of the views contained therein. </span><br/>
+                        <a id="ctl00_hplCopyright" href="https://ceac.state.gov/ceac/Common/Copyright.aspx"
+                           target="_ceac">Copyright Information</a>
+                        &nbsp;
+                        <a id="ctl00_hplDisclaimers" href="https://ceac.state.gov/ceac/Common/Disclaimer.aspx"
+                           target="_ceac">Disclaimers</a>
+                        &nbsp;
+                        <span style="float: right;">
+                            <span id="ctl00_lblIP" tabindex="6050" style="background-color:LightGrey;font-size:0.6em;">(223)</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="fade"/>
+        <div id="processmodal"/>
+
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var ctl00_SiteContentPlaceHolder_ValidationSummarySecond = document.all ? document.all["ctl00_SiteContentPlaceHolder_ValidationSummarySecond"] : document.getElementById("ctl00_SiteContentPlaceHolder_ValidationSummarySecond");
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.headertext = "Sign In Failed";
+        ctl00_SiteContentPlaceHolder_ValidationSummarySecond.validationGroup = "Login";
+        var ctl00_SiteContentPlaceHolder_cvCaseNo = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvCaseNo"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvCaseNo");
+        ctl00_SiteContentPlaceHolder_cvCaseNo.display = "None";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvCaseNo.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValTextLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValTextLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValTextLogin");
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValTextLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValDoBLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValDoBLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValDoBLogin");
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValDoBLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValFourthField = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValFourthField"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValFourthField");
+        ctl00_SiteContentPlaceHolder_cvValFourthField.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValFourthField.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        var ctl00_SiteContentPlaceHolder_cvValCaptchaLogin = document.all ? document.all["ctl00_SiteContentPlaceHolder_cvValCaptchaLogin"] : document.getElementById("ctl00_SiteContentPlaceHolder_cvValCaptchaLogin");
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.display = "None";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.validationGroup = "Login";
+        ctl00_SiteContentPlaceHolder_cvValCaptchaLogin.evaluationfunction = "CustomValidatorEvaluateIsValid";
+        //]]>
+    </script>
+
+
+</form>
+</body>
+</html>
